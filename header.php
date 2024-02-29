@@ -20,41 +20,5 @@
     <?php include get_stylesheet_directory().'/modules/mega-menu-mobile.php'; ?>
 
 	<div id="page">
-		<header class="header">
-			<?php if(get_field('sitewide_notice_enable', 'option')): ?>
-				<div class="header--site__wide__notice">
-					<div class="max__width">
-						<?php the_field('sitewide_notice', 'option'); ?>
-					</div>
-				</div>
-			<?php endif; ?>
-
-			<div class="header__main">
-				<div class="max__width">
-					<div class="header__main--left">
-						<div class="logo">
-							<a href="<?php echo esc_url(home_url()); ?>" title="<?php bloginfo('name'); ?>">
-								<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" />
-							</a>
-						</div>
-					</div>
-
-					<div class="header__main--right">
-						<?php include get_stylesheet_directory().'/modules/mega-menu.php'; ?>
-
-						<ul class="actions"> 
-							<li class="burger-menu">
-								<a href="#nav_mobile">
-									<i class="fal fa-bars"></i>
-								</a>
-							</li>
-						</ul>
-
-						<ul class="buttons">
-							<a href="#" class="button outline">Login <i class="fa fa-arrow-right"></i></a>
-							<a href="#" class="button white">Register <i class="fa fa-arrow-right"></i></a>
-						</ul>
-					</div>
-				</div><!-- max__width -->
-			</div><!-- header__main -->
-		</header><!-- header -->
+		
+		<!-- header -->

@@ -363,24 +363,11 @@
       "ou" : "lpckwebp-none",
       "rq" : 75
     },
-    "\/img\/Layer_1.png" : {
+    "\/img\/hang-bg.png" : {
       "ft" : 32768,
       "iS" : 15782,
       "oA" : 0,
-      "oAP" : "\/img\/Layer_1.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/img\/logo.png" : {
-      "ft" : 32768,
-      "iS" : 5088,
-      "oA" : 0,
-      "oAP" : "\/img\/logo.png",
+      "oAP" : "\/img\/hang-bg.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -8158,7 +8145,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 652874357.77309203,
-    "displayValue" : "take-blood-2024",
+    "displayValue" : "dojo-films-2024",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-koamaru",
     "iconImageWasSetByUser" : 0

@@ -146,7 +146,7 @@ class FL1_Admin {
     public function acf_hide_menu() {
 
         $admins = array(
-            'fl1admin',
+            'TWS',
         );
 
         $current_user = wp_get_current_user();

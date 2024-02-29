@@ -20,32 +20,6 @@
 	</div>
 </footer>
 
-<div class="subfooter">
-		<div class="max__width">
-
-		<div class="subfooter--left">
-			<small>&copy; <?php bloginfo('name') ?> <?php echo date('Y'); ?>. Registered with number: 10246071</small>
-		</div><!-- subfooter--left -->
-
-		<div class="subfooter--right">
-			<small><a href="http://www.fl1.digital" target="_blank">Powered by FL1 Digital</a></small>
-		</div><!-- subfooter--left -->
-
-	</div><!-- max__width -->
-</div><!-- subfooter -->
-
-<div class="spotlight-search">
-	<div class="spotlight-search--content">
-		<a href="#" class="spotlight-close"><i class="fal fa-times"></i></a>
-
-		<h2>Search <?php bloginfo('name'); ?></h2>
-		<form action="<?php echo esc_url(home_url()); ?>">
-			<input type="text" name="s" placeholder="ie. Tenants" />
-			<button type="submit" class="button primary"><i class="fal fa-search"></i></button>
-		</form>
-	</div>
-</div>
-
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

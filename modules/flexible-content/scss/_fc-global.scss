@@ -84,12 +84,10 @@
 			position: absolute;
 			z-index: -1;
 			width: 100%;
-			max-width: 1160px;
 			height: 100%;
 			top: 0;
 			left: 50%;
 			transform: translateX(-50%);
-			border-radius: var(--fl1-radius-xxl);
 		}
 
 		&.fc-background {
