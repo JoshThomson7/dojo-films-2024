@@ -1,0 +1,70 @@
+.apf__select__wrap {
+	display: flex;
+	flex: 1;
+	border-radius: var(--fl1-radius-md);
+
+	&.column { 
+		flex-direction: column;
+	}
+
+	@include breakpoint(sisterbear) {
+		width: 90%;
+		margin: 0;
+		border: 5px #fff solid;
+		box-shadow: none;
+		flex: auto;
+	}
+
+	.apf__select {
+		width: 100%;
+		border: none;
+		cursor: pointer;
+		border-radius: 0;
+		font-size: 16px;
+		color: var(--fl1-text);
+		letter-spacing: -0.5px;
+		background-size: 31px;
+		font-family: var(--fl1-primary-font);
+		padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+		border-radius: var(--fl1-radius-md);
+		border: 1px var(--fl1-border) solid;
+		background: url('../../img/select-arrow-down.png') no-repeat right center var(--fl1-white);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		background-position-x: 98%;
+		background-size: 24px;
+		font-weight: 600;
+		min-width: 140px;
+		min-height: 56px;
+		@include breakpoint(sisterbear) {
+			width: 90%;
+		}
+	}
+
+	select option {
+		color: var(--fl1-primary);
+	}
+
+	span {
+		margin: auto;
+		color: var(--fl1-text);
+		font-size: 16px;
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			display: none;
+		}
+	}
+
+	@include breakpoint(sisterbear) {
+		width: 50%;
+	}
+}
+
+.apf__search__button {
+	flex-grow: 1;
+	max-width: 116px;
+
+	@include breakpoint(brotherbear){max-width: 100%;}
+
+	i { 
+		font-size: var(--fl1-font-lg);
+	}
+}

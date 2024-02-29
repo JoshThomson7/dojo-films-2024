@@ -1,0 +1,142 @@
+/*
+*	Single Property Header (Boxes)
+*
+*	Styles for the boxed width header of property details page.
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+.apf__single__property__header {
+
+	padding: var(--fl1-spacing-sm) 0 var(--fl1-spacing-md);
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--fl1-border);
+	border-bottom: 1px solid var(--fl1-border);
+	margin-bottom: var(--fl1-spacing-lg);
+
+	@include breakpoint(mamabear) {
+		flex-direction: column;
+		text-align: center;
+		padding: 10px 0 0;
+	}
+
+	.apf__single__property__title {
+		h1 {
+			font-size: var(--fl1-font-xl);
+			font-weight: 600;
+			color: var(--fl1-secondary);
+			padding-bottom: var(--fl1-spacing-sm);
+			@include breakpoint(mamabear) {
+				float: none;
+				font-size: 26px;
+				padding-bottom: 10px;
+			}
+
+			span {
+				font-size: var(--fl1-font-md);
+				clear: both;
+				display: block;
+				color: var(--fl1-secondary);
+				font-weight: 500;
+				small.new-home {
+					background: lighten($primary, 60%);
+					color: var(--fl1-primary);
+					font-size: 11px;
+					padding: 6px 9px;
+					border-radius: var(--fl1-radius-sm);
+					margin-left: 10px;
+					min-width: 76px;
+					line-height: normal;
+					text-align: center;
+					font-weight: 700;
+				}
+			}
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+			gap: var(--fl1-spacing-sm);
+			@include breakpoint(mamabear) {
+				width: 100%;
+				justify-content: center;
+			}
+
+			li {
+				list-style: none;
+				display: flex;
+				align-items: center;
+				i {
+					color: var(--fl1-secondary);
+					font-size: var(--fl1-font-xs);
+					position: relative;
+					top: 2px;
+					margin-right: 3px;
+					&.flaticon-bath {
+						font-size: 18px;
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.apf__single__property__price {
+		text-align: right;
+		min-width: 205px;
+		display: flex;
+		flex-direction: column;
+		gap: var(--fl1-spacing-xs);
+
+		@include breakpoint(mamabear) {
+			float: none;
+			clear: both;
+			margin: 20px 0;
+			border-bottom: none;
+		}
+
+		.digits {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			text-align: right;
+			font-size: var(--fl1-font-xl);
+			font-weight: 600;
+			color: var(--fl1-secondary);
+
+			@include breakpoint(mamabear) {
+				background: none;
+				padding: 0;
+				text-align: center;
+			}
+
+			.apf__price__before { 
+				font-size: var(--fl1-font-md);
+				display: inline-block;
+				margin-right: var(--fl1-spacing-xs);
+			}
+
+			small {
+				font-size: var(--fl1-font-xs);
+				color: var(--fl1-text-light);
+				align-self: flex-end;
+			}
+		}
+
+		.status {
+			@include breakpoint(mamabear) {
+				display: flex;
+				justify-content: center;
+			}
+
+			.apf__property__status {
+				display: inline-block;
+				font-size: var(--fl1-font-xxs);
+				padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+				border-radius: var(--fl1-radius-xl);
+			}
+		}
+	}
+}

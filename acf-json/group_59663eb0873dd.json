@@ -1,0 +1,874 @@
+{
+    "key": "group_59663eb0873dd",
+    "title": "Header Options",
+    "fields": [
+        {
+            "key": "field_60f19eea58a12",
+            "label": "Mega Menu",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5463579e4161c",
+            "label": "Main Menu",
+            "name": "mega_menu",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add sections and their drop-downs to the main menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_546357cf4161d",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Menu Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_54635a93496d0",
+                    "label": "Item",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "parent_repeater": "field_5463579e4161c"
+                },
+                {
+                    "key": "field_546357cf4161d",
+                    "label": "Label",
+                    "name": "menu_item_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "The label of this item.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0,
+                    "parent_repeater": "field_5463579e4161c"
+                },
+                {
+                    "key": "field_57a478c90c477",
+                    "label": "Icon",
+                    "name": "menu_item_icon",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Enter an icon from <a href=\"https:\/\/fontawesome.com\/icons\" target=\"_blank\">here<\/a>.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5463579e4161c"
+                },
+                {
+                    "key": "field_546357f84161e",
+                    "label": "Link",
+                    "name": "menu_item_link",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Paste here the URL where this menu item link to. Leave blank for no link.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0,
+                    "parent_repeater": "field_5463579e4161c"
+                },
+                {
+                    "key": "field_5655e5462a68d",
+                    "label": "New window?",
+                    "name": "menu_item_target",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Check this box to open this link in a new window.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 50,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_5463579e4161c"
+                },
+                {
+                    "key": "field_54635a5a45cc1",
+                    "label": "Columns",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "parent_repeater": "field_5463579e4161c"
+                },
+                {
+                    "key": "field_63fc8cce3cd43",
+                    "label": "Left Position",
+                    "name": "menu_left_position",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "Use if menu overflows to the right.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_5463579e4161c"
+                },
+                {
+                    "key": "field_5463580d4161f",
+                    "label": "Columns",
+                    "name": "menu_item_columns",
+                    "aria-label": "",
+                    "type": "flexible_content",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layouts": {
+                        "546358176775a": {
+                            "key": "546358176775a",
+                            "name": "submenu_column",
+                            "label": "Pages\/Posts",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5463582e41620",
+                                    "label": "Column name",
+                                    "name": "column_name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Enter here the name of this column.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "ie. Products",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_643fa70d26258",
+                                    "label": "Column Link",
+                                    "name": "column_link",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Link the column heading.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_save_meta": 0,
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_57a4797ec9084",
+                                    "label": "Column Icon",
+                                    "name": "column_icon",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Enter an icon from <a href=\"https:\/\/fontawesome.com\/icons\" target=\"_blank\">here<\/a>.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_save_meta": 0,
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_63fc86bccdad2",
+                                    "label": "Column Icon Image",
+                                    "name": "column_icon_img",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Upload an image.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_save_meta": 0,
+                                    "uploader": "",
+                                    "return_format": "url",
+                                    "acfe_thumbnail": 0,
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium",
+                                    "library": "all"
+                                },
+                                {
+                                    "key": "field_63fc873f176ee",
+                                    "label": "Column Theme",
+                                    "name": "column_theme",
+                                    "aria-label": "",
+                                    "type": "button_group",
+                                    "instructions": "Choose a theme colour.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_save_meta": 0,
+                                    "choices": {
+                                        "default": "<span style=\"padding: 2px 6px; border-radius: 4px; display: inline-block; color: #fff; background: #7D308A;\">Default<\/span>",
+                                        "write": "<span style=\"padding: 2px 6px; border-radius: 4px; display: inline-block; color: #fff; background: #CAD507;\">Write<\/span>",
+                                        "spell": "<span style=\"padding: 2px 6px; border-radius: 4px; display: inline-block; color: #fff; background: #8A1A9B;\">Spell<\/span>",
+                                        "read": "<span style=\"padding: 2px 6px; border-radius: 4px; display: inline-block; color: #fff; background: #2ED9C3;\">Read<\/span>",
+                                        "progress": "<span style=\"padding: 2px 6px; border-radius: 4px; display: inline-block; color: #fff; background: #00A0DF;\">Progress<\/span>",
+                                        "poetry": "<span style=\"padding: 2px 6px; border-radius: 4px; display: inline-block; color: #fff; background: #2ed981;\">Poetry<\/span>",
+                                        "parents": "<span style=\"padding: 2px 6px; border-radius: 4px; display: inline-block; color: #fff; background: #F39844;\">Parents<\/span>",
+                                        "home-learning": "<span style=\"padding: 2px 6px; border-radius: 4px; display: inline-block; color: #fff; background: #00AC69;\">Home Learning<\/span>"
+                                    },
+                                    "default_value": "",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_57a4997b0adf2",
+                                    "label": "Sub-menu",
+                                    "name": "column_subs",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_save_meta": 0,
+                                    "acfe_repeater_stylised_button": 0,
+                                    "layout": "block",
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Add sub-menu",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_60f1aaf9134ee",
+                                            "label": "Type",
+                                            "name": "type",
+                                            "aria-label": "",
+                                            "type": "button_group",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "post": "Existing",
+                                                "custom": "Custom Link"
+                                            },
+                                            "allow_null": 0,
+                                            "default_value": "",
+                                            "layout": "horizontal",
+                                            "return_format": "value",
+                                            "parent_repeater": "field_57a4997b0adf2"
+                                        },
+                                        {
+                                            "key": "field_60f1ab2c134ef",
+                                            "label": "Page\/post",
+                                            "name": "post",
+                                            "aria-label": "",
+                                            "type": "post_object",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_60f1aaf9134ee",
+                                                        "operator": "==",
+                                                        "value": "post"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "post_type": [
+                                                "page",
+                                                "post",
+                                                "team",
+                                                "branch"
+                                            ],
+                                            "taxonomy": "",
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "return_format": "",
+                                            "ui": 1,
+                                            "save_custom": 0,
+                                            "save_post_type": "",
+                                            "save_post_status": "",
+                                            "parent_repeater": "field_57a4997b0adf2"
+                                        },
+                                        {
+                                            "key": "field_60f1ab87134f0",
+                                            "label": "Custom",
+                                            "name": "custom",
+                                            "aria-label": "",
+                                            "type": "group",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_60f1aaf9134ee",
+                                                        "operator": "==",
+                                                        "value": "custom"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layout": "row",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_60f1ab95134f1",
+                                                    "label": "Label",
+                                                    "name": "label",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "maxlength": ""
+                                                },
+                                                {
+                                                    "key": "field_60f1ab99134f2",
+                                                    "label": "URL",
+                                                    "name": "url",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "maxlength": ""
+                                                }
+                                            ],
+                                            "acfe_seamless_style": 0,
+                                            "acfe_group_modal": 0,
+                                            "acfe_group_modal_close": 0,
+                                            "acfe_group_modal_button": "",
+                                            "acfe_group_modal_size": "large",
+                                            "parent_repeater": "field_57a4997b0adf2"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_settings": false,
+                            "acfe_flexible_settings_size": "medium",
+                            "acfe_flexible_modal_edit_size": false,
+                            "acfe_flexible_category": false
+                        },
+                        "layout_60f1b11305219": {
+                            "key": "layout_60f1b11305219",
+                            "name": "contact",
+                            "label": "Contact",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60f1b1130521a",
+                                    "label": "Column name",
+                                    "name": "column_name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Enter here the name of this column.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "ie. Products",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60f1b1130521b",
+                                    "label": "Column Icon",
+                                    "name": "column_icon",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Enter an icon from <a href=\"https:\/\/fontawesome.com\/icons\" target=\"_blank\">here<\/a>.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60f1b13f05223",
+                                    "label": "Contact",
+                                    "name": "contact",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "row",
+                                    "button_label": "Add contact",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_60f1b2bc66f2f",
+                                            "label": "Name",
+                                            "name": "name",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "parent_repeater": "field_60f1b13f05223"
+                                        },
+                                        {
+                                            "key": "field_60f1b2c266f30",
+                                            "label": "Phone",
+                                            "name": "phone",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "parent_repeater": "field_60f1b13f05223"
+                                        },
+                                        {
+                                            "key": "field_60f1b2cc66f31",
+                                            "label": "Email",
+                                            "name": "email",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "parent_repeater": "field_60f1b13f05223"
+                                        }
+                                    ],
+                                    "acfe_repeater_stylised_button": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_settings": false,
+                            "acfe_flexible_settings_size": "medium",
+                            "acfe_flexible_modal_edit_size": false,
+                            "acfe_flexible_category": false
+                        },
+                        "layout_60f579633dc73": {
+                            "key": "layout_60f579633dc73",
+                            "name": "icon_links",
+                            "label": "Icon Links",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60f579633dc74",
+                                    "label": "Column name",
+                                    "name": "column_name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Enter here the name of this column.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "ie. Products",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60f579633dc75",
+                                    "label": "Column Icon",
+                                    "name": "column_icon",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Enter an icon from <a href=\"https:\/\/fontawesome.com\/icons\" target=\"_blank\">here<\/a>.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60f579633dc76",
+                                    "label": "Sub-menu",
+                                    "name": "column_subs",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5463579e4161c",
+                                                "operator": "!=empty"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "row",
+                                    "button_label": "Add Icon Link",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_60f579633dc7a",
+                                            "label": "Label",
+                                            "name": "label",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "parent_repeater": "field_60f579633dc76"
+                                        },
+                                        {
+                                            "key": "field_60f579633dc7b",
+                                            "label": "URL",
+                                            "name": "url",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "parent_repeater": "field_60f579633dc76"
+                                        },
+                                        {
+                                            "key": "field_60f579633dc7c",
+                                            "label": "Icon",
+                                            "name": "icon",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "Enter an icon from <a href=\"https:\/\/fontawesome.com\/icons\" target=\"_blank\">here<\/a>.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": "",
+                                            "parent_repeater": "field_60f579633dc76"
+                                        }
+                                    ],
+                                    "acfe_repeater_stylised_button": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_settings": false,
+                            "acfe_flexible_settings_size": "medium",
+                            "acfe_flexible_modal_edit_size": false,
+                            "acfe_flexible_category": false
+                        }
+                    },
+                    "button_label": "Add Column",
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_advanced": false,
+                    "acfe_flexible_stylised_button": false,
+                    "acfe_flexible_hide_empty_message": false,
+                    "acfe_flexible_empty_message": "",
+                    "acfe_flexible_layouts_templates": false,
+                    "acfe_flexible_layouts_previews": false,
+                    "acfe_flexible_layouts_placeholder": false,
+                    "acfe_flexible_layouts_thumbnails": false,
+                    "acfe_flexible_layouts_settings": false,
+                    "acfe_flexible_async": [],
+                    "acfe_flexible_add_actions": [],
+                    "acfe_flexible_remove_button": [],
+                    "acfe_flexible_layouts_state": false,
+                    "acfe_flexible_modal_edit": {
+                        "acfe_flexible_modal_edit_enabled": false,
+                        "acfe_flexible_modal_edit_size": "large"
+                    },
+                    "acfe_flexible_modal": {
+                        "acfe_flexible_modal_enabled": false,
+                        "acfe_flexible_modal_title": false,
+                        "acfe_flexible_modal_size": "full",
+                        "acfe_flexible_modal_col": "4",
+                        "acfe_flexible_modal_categories": false
+                    },
+                    "parent_repeater": "field_5463579e4161c"
+                }
+            ],
+            "acfe_repeater_stylised_button": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1681893346
+}

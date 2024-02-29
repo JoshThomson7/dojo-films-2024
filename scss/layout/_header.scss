@@ -1,0 +1,203 @@
+///
+/// Header
+/// 
+header.header {
+    width: 100%;
+    transition: all 0.4s ease;
+    width: 100%;
+	position: absolute;
+	z-index: 2;
+
+    .header--site__wide__notice {
+        padding: var(--fl1-spacing-xs) 0;
+        background: var(--fl1-primary);
+        font-size: .75rem;
+        font-weight: 500;
+        color: #fff;
+        a {
+            color: var(--fl1-tertiary);
+            font-weight: 700;
+        }
+        .max__width {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    // Nav
+    @import "./mega-menu";
+
+    .header__main {
+        position: relative;
+		z-index: 1;
+        padding: 20px 0;
+
+        .max__width {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+			position: relative;
+			z-index: 1;
+
+			@include breakpoint(sisterbear) {
+				padding-right: 8px;
+			}
+        }
+
+        &--left {
+            display: flex;
+            align-items: center;
+            @include breakpoint(1060px) {
+                gap: var(--fl1-spacing-sm);
+            }
+
+            .logo {
+                width: 150px;
+                transition: all 0.4s ease;
+                margin-right: var(--fl1-spacing-xs);
+
+				svg {
+					fill: var(--fl1-white);
+				}
+            }
+        }
+
+        &--right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            ul.actions {
+                display: flex;
+
+                li {
+                    display: flex;
+
+                    a { 
+                        display: flex;
+						flex-direction: column;
+						justify-content: center;
+						padding: var(--fl1-spacing-sm);
+
+                        &:not(.button) {
+                            i { 
+                                font-size: var(--fl1-font-xs);
+                                color: var(--fl1-white);
+                            }
+                        }
+                    }
+
+					&.enquire {
+						margin-left: var(--fl1-spacing-md);
+
+						@include breakpoint(sisterbear) {
+							display: none;
+						}
+
+						a {
+							position: relative;
+							padding: 0;
+
+							span {
+								display: flex;
+								justify-content: center;
+								text-align: center;
+								padding: var(--fl1-spacing-sm) var(--fl1-spacing-2xl);
+								font-family: var(--fl1-secondary-font);
+								color: var(--fl1-white);
+								text-transform: uppercase;
+								font-weight: 700;
+								z-index: 1;
+								position: relative;
+							}
+						}
+
+						&.has-button {
+							a{
+								&:hover { 
+									&::before,
+									&::after {
+										background: var(--fl1-primary-dark);
+										transition: all 0.3s ease;
+									}
+								}
+							}
+						}
+					}
+
+					&.burger-menu {
+						display: none;
+						@include breakpoint(1060px) {
+							display: flex;
+						}
+			
+						i {
+							font-size: 30px;
+							color: var(--fl1-primary);
+							@include breakpoint(teenbear) {
+								font-size: 24px;
+							}
+						}
+					}
+                }
+            }
+
+            ul.socials{
+                display: flex;
+
+                .social-icons{
+                    background: #548687; border-radius: 50%; margin: 0 3px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+
+                    a{
+                        i{color: white;}
+                    }
+                }
+            }
+
+            ul.buttons{
+                display: flex;
+
+                a{margin-left: 10px;
+                    i{padding-left: 10px;}
+                }
+            }
+        }
+    }
+
+    &.sticky,
+    &.not-sticky {
+        transition: all 0.3s ease;
+        .logo {
+            width: 185px;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &.sticky {
+        top: 0;
+        background: rgba(var(--fl1-tertiary), 0.9);
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        &.sticky {
+            background: rgba(var(--fl1-tertiary), 0.5);
+            backdrop-filter: blur(20px);
+        }
+    }
+
+    &.not-sticky {
+        top: -150px;
+    }
+
+    &.reset {
+        .logo {
+            width: 185px;
+            transition: all 0.3s ease;
+            @include breakpoint(papabear) {
+                width: 70px;
+            }
+        }
+    }
+}

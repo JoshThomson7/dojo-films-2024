@@ -1,0 +1,4 @@
+.token
+composer.phar
+/vendor/
+/.env

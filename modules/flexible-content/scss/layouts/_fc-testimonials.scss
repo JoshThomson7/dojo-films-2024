@@ -1,0 +1,95 @@
+/*
+    Testimonials
+*/
+
+.fc_testimonials {
+    background: var(--fl1-primary);
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 45px;
+
+    .fc-layout-heading{
+        h2{color: white;}
+    }
+
+    .testimonials__wrapper {
+
+        article {
+            .inner { padding: 20px;}
+
+            .testimonial__meta { flex:1 0 100%;
+
+                .image{
+                    img{max-width: 100px; margin-bottom: 20px;}
+                }
+
+                .stars {
+                    display: flex; justify-content: center;
+                    @include breakpoint(mamabear) { margin-bottom:10px;}
+                    span { padding: 0 3px; color:var(--fl1-secondary); font-size: 20px;}
+                }
+            }
+
+            .testim__content { overflow: hidden;
+                &.trunc { height: 75px;}
+                p { text-align: center; font-size:16px; line-height:26px; color: var(--fl1-white); padding-bottom:15px; margin:0;}
+            }
+
+            .testim__read-more { font-size: 13px; color: var(--fl1-white); display: block; margin: 10px 20px 0 0; cursor: pointer; text-align: right;
+                &:hover { color: var(--fl1-secondary);}
+            }
+
+            .testim__title{
+                h3 { text-align: center; font-size: 16px; color: var(--fl1-white); margin-top: 10px; line-height: 23px; font-weight: 600;}
+            }
+
+        }
+
+    }
+
+    // Slick dot navigation
+    .slick-dots {
+        text-align: center;
+        padding: 15px 0 0 0;
+        bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            vertical-align: top;
+            margin: 0 4px;
+            width: auto;
+            height: auto;
+
+            button {
+                width: 13px;
+                height: 13px;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+                box-shadow: 0 0 0 0 transparent;
+                vertical-align: middle;
+                color: #fff;
+                margin: 0;
+                transition:all .3s ease;
+                border: 1px solid white;
+                &::before {
+                    display: none;
+                }
+                &:focus {
+                    outline: none;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            &.slick-active {
+                button {
+                    background: var(--fl1-white);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

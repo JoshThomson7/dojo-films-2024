@@ -1,0 +1,24 @@
+/// Breadcrumbs
+
+.breadcrumbs {
+	display: flex;
+	gap: var(--fl1-spacing-xxs);
+	justify-content: center;
+	align-items: center;
+	padding: var(--fl1-spacing-xl) 0 0;
+
+	li {
+		font-size: var(--fl1-font-xxs);
+
+		strong { 
+			color: var(--fl1-primary);
+		}
+
+		a { 
+			color: var(--fl1-text);
+			&:hover { 
+				color: var(--fl1-secondary);
+			}
+		}
+	}
+}

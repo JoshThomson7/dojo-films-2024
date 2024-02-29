@@ -1,0 +1,95 @@
+/*
+-----------------------------------------------------
+    ___                            ___
+   /   | ______________  _________/ (_)___  ____
+  / /| |/ ___/ ___/ __ \/ ___/ __  / / __ \/ __ \
+ / ___ / /__/ /__/ /_/ / /  / /_/ / / /_/ / / / /
+/_/  |_\___/\___/\____/_/   \__,_/_/\____/_/ /_/
+
+-----------------------------------------------------
+Accordion
+*/
+
+.fc_accordion {
+	&.grey {
+		.accordion__wrap {
+			h3 {
+				background: var(--fl1-white);
+			}
+		}
+	}
+
+	.accordion__wrap {
+		background: #fff;
+		border-radius: var(--fl1-radius-xl);
+		position: relative;
+		margin-bottom: var(--fl1-spacing-xs);
+
+		.toggle {
+			display: flex;
+			gap: var(--fl1-spacing-sm);
+			padding: var(--fl1-spacing-sm) var(--fl1-spacing-md);
+			font-size: var(--fl1-font-sm);
+			font-weight: 600;
+			color: var(--fl1-primary);
+			cursor: pointer;
+
+			i {
+				display: block;
+				color: var(--fl1-secondary);
+				padding: 0 var(--fl1-spacing-xs);
+				border-radius: var(--fl1-radius-md);
+
+				&::before {
+					content: '\2b';
+					font-family: 'Font Awesome 6 Pro';
+				}
+			}
+		}
+
+		.accordion__content {
+			padding: 0 var(--fl1-spacing-md) var(--fl1-spacing-lg);
+			display: none;
+			@include dontbreak();
+		}
+
+		.accordion__bg {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+			transition: all 0.2s ease;
+		}
+
+		&.active {
+			border-bottom: none;
+			z-index: 2;
+			.toggle {
+				font-weight: 700;
+
+				i {
+					background: var(--fl1-primary); color: white;
+					&::before {
+						content: '\f068';
+					}
+				}
+			}
+			h3:not(.toggle) {
+				padding: 0;
+				margin-bottom: 20px;
+			}
+			.accordion__content {
+				display: block;
+				animation: fadeInUp 0.3s ease-in;
+
+				p{padding-left: 50px;}
+			}
+			.accordion__bg {
+				background: var(--fl1-secondary-light);
+				border-radius: var(--fl1-radius-xl);
+			}
+		}
+	}
+}

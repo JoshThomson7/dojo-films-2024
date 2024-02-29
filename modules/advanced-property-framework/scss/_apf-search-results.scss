@@ -1,0 +1,159 @@
+/*
+*	Property search combined
+*
+*	Styles for the combined view of the property search results,
+*	where the listing and the map are side by side.
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+.apf {
+	padding: var(--fl1-spacing-xs);
+}
+
+.apf__properties__loading__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	display: none;
+	z-index: 10;
+	padding: 20% 45% 0 0;
+	align-items: flex-end;
+	@include breakpoint(brotherbear) {
+		align-items: center;
+		padding-right: 0;
+	}
+
+	&.loading {
+		display: flex;
+		flex-direction: column;
+	}
+	svg {
+		width: 38px;
+		margin: 0 15px 10px 0;
+	}
+
+	p {
+		color: var(--fl1-primary);
+		font-weight: 600;
+	}
+}
+
+.apf__ajax__progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: var(--fl1-primary);
+}
+
+.apf__results {
+	padding: 20px 5px;
+	display: flex;
+	justify-content: space-between;
+	@include breakpoint(brotherbear) {
+		flex-direction: column;
+	}
+	@include breakpoint(mamabear) {
+		padding-top: 0;
+	}
+
+	.apf__results__list {
+		width: 65%;
+		transition: all 0.4s ease;
+		flex: 1 0 0%;
+		position: relative;
+		@include breakpoint(papabear) {
+			width: 50%;
+		}
+		@include breakpoint(brotherbear) {
+			width: 100%;
+		}
+	}
+}
+
+.apf__properties {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+	position: relative;
+	@import 'apf-loop';
+}
+
+@import 'apf-map';
+
+.apf__no__results {
+	padding: 20% 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--fl1-spacing-sm);
+	text-align: center;
+	width: 100%;
+
+	.no__results__img {
+		width: 230px;
+		height: 230px;
+		border-radius: 100%;
+		padding: 20px;
+		background: $lightgrey;
+		margin-bottom: 20px;
+		svg {
+			position: relative;
+			top: 18px;
+		}
+	}
+
+	i {
+		font-size: 3.5rem;
+		color: var(--fl1-primary);
+		margin-bottom: var(--fl1-spacing-sm);
+		&.i-small {
+			font-size: 48px;
+		}
+	}
+
+	h2 {
+		font-size: var(--fl1-font-lg);
+		color: var(--fl1-secondary);
+	}
+	p {
+		font-size: 16px;
+		color: $text;
+	}
+}
+
+.apf__list__map__view__mobile {
+	display: none;
+	position: fixed;
+	bottom: 13px;
+	text-align: center;
+	width: 100%;
+	z-index: 15;
+	align-items: center;
+	@include breakpoint(brotherbear) {
+		display: flex;
+	}
+
+	a {
+		display: flex;
+		font-size: 30px;
+		font-weight: 600;
+		color: #fff;
+		padding: 10px;
+		width: 65px;
+		height: 65px;
+		border-radius: 50px;
+		background: var(--fl1-primary);
+		border: 4px solid #fff;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+		justify-content: center;
+		align-items: center;
+	}
+}

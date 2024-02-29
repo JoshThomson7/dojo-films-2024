@@ -1,0 +1,37 @@
+/**
+* GF Checkboxes and Radio buttons
+*/
+
+&:not(.gf__radio__date):not(.gf__radio__time) { // Only normal style radios and checkboxes
+    .gfield_radio,
+    .gfield_checkbox {
+        .gchoice { @include pretty-checkradio("label", "\f111", "\f058");
+            @include breakpoint(papabear) { width: 50%; margin-right: 0;}
+            @include breakpoint(teenbear) { width: 100%;}
+
+            label { 
+                padding: 5px 10px 5px 5px;
+                border-radius: 50px;
+                &:hover { background: var(--fl1-lightgrey);}
+
+                .ginput_price { padding-left: 15%; margin-left: auto; font-weight: 700;}
+            }
+        }
+    }
+
+    .gfield_radio#input_55_82,
+    .gfield_checkbox#input_55_83 { 
+        label { 
+            max-width: 400px;
+        }
+    }
+
+    &.gf__radio__check__equal {
+        .gfield_radio,
+        .gfield_checkbox {
+            .gf_choice { width: 50%; margin-right: 0;
+                @include breakpoint(teenbear) { width: 100%;}
+            }
+        }
+    }
+}

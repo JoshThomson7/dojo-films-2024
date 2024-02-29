@@ -1,0 +1,52 @@
+/*
+----------------------------
+  ______      __    __
+ /_  __/___ _/ /_  / /__
+  / / / __ `/ __ \/ / _ \
+ / / / /_/ / /_/ / /  __/
+/_/  \__,_/_.___/_/\___/
+
+---------------------------
+Table
+*/
+
+.fc_table {
+
+	.table-wrap { 
+		background: #fff;
+		padding: var(--fl1-spacing-xl);
+		border-radius: var(--fl1-radius-lg);
+		box-shadow: 0 6px 20px rgba(0,0,0,.1);
+	}
+
+    table { width:100%;
+        thead {
+            @include breakpoint(mamabear) { display: none;}
+            th { color: var(--fl1-text); padding:10px; text-align:left; font-size:16px; font-weight: 700; }
+        }
+
+        tbody {
+			tr { 
+				@include breakpoint(mamabear) {
+					border-bottom: 1px solid var(--fl1-border);
+				}
+			}
+            tr:nth-child(odd){ background-color:#fff;
+                @include breakpoint(mamabear) { background: none;}
+            }
+
+            tr:nth-child(odd) { background-color: var(--fl1-lightgrey);
+                @include breakpoint(mamabear) { background: none;}
+            }
+
+            td { color:inherit; padding:10px; text-align:left; font-size: var(--fl1-font-xs); line-height:20px;
+                @include breakpoint(mamabear) { width: 100%; display: block; padding: 5px 0;
+                    &:nth-child(odd) { background-color: none;}
+                    &:before { content: attr(data-th); width: 100%; display: block; padding: 10px 0; color: var(--fl1-text); text-align:left; font-size:16px; font-weight: 700;}
+                }
+
+                &:last-child { border-right:none;}
+            }
+        }
+    }
+}

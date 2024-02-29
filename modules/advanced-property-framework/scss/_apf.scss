@@ -1,0 +1,49 @@
+/*
+*	Advanced Property Framework
+*/
+@use 'sass:math';
+
+@import '../../../scss/inc/vars';
+@import '../../../scss/inc/mixins';
+@import '../../../scss/inc/animations';
+@import 'apf-font-icons';
+@import 'apf-search-form';
+@import 'apf-search-results';
+@import 'apf-pagination';
+@import 'single-property/apf-single-property';
+@import 'apf-book-viewing-form';
+@import 'apf-book-viewing-thanks';
+
+@import './branches/apf-branches';
+
+// Globals
+body {
+	&.apf__property__search {
+		header.header {
+			.header__main {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.avb__apf__search {
+		position: relative;
+		z-index: 1;
+		.apf__search {
+			border-radius: var(--fl1-radius-xxl);
+		}
+	}
+}
+
+.apf__status__red {
+	background: #f65555;
+	color: var(--fl1-white);
+}
+.apf__status__amber {
+	background: #f6bc55;
+	color: var(--fl1-secondary);
+}
+.apf__status__grey {
+	background: var(--fl1-lightgrey);
+	color: var(--fl1-secondary);
+}

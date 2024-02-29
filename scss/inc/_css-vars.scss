@@ -1,0 +1,52 @@
+:root { 
+    // Colors
+    --fl1-primary: #192953;
+    --fl1-primary-light: #fff0f8;
+    --fl1-secondary: #E0485B;
+    --fl1-secondary-light: #F3F5FF;
+    --fl1-tertiary: #4891E1;
+    --fl1-lightgrey: #eef0fb;
+    --fl1-text: #5F6572;
+    --fl1-text-light: #caced5;
+    --fl1-border: #e3e9ef;
+    --fl1-border-dark: #abb1b8;
+    --fl1-success: #64c82d;
+    --fl1-warning: #ffc458;
+    --fl1-error: tomato;
+    --fl1-white: #fff;
+    --fl1-blue-highlight: #D9F1FF;
+
+    // Fonts
+    --fl1-primary-font: 'X1', sans-serif;
+    --fl1-secondary-font: 'X1', sans-serif;
+    --fl1-base-font-size: 1rem;
+
+    // Other
+    --fl1-radius-xs: .25rem;
+    --fl1-radius-sm: .5rem;
+    --fl1-radius-md: 1rem;
+    --fl1-radius-lg: 1.5rem;
+    --fl1-radius-xl: 2rem;
+    --fl1-radius-xxl: 3rem;
+
+	// Font sizes
+	--fl1-font-xxxl: 2.5rem; // 40px
+	--fl1-font-xxl: 2rem;  	 // 32px
+	--fl1-font-xl: 1.75rem;  // 28px
+	--fl1-font-lg: 1.5rem; 	 // 24px
+	--fl1-font-md: 1.25rem;  // 20px
+	--fl1-font-sm: 1.125rem; // 18px
+	--fl1-font-xs: 1rem; 	 // 16px
+	--fl1-font-xxs: 0.875rem; // 14px
+	--fl1-font-xxxs: 0.75rem; // 12px
+	
+	// Spacing
+	--fl1-spacing-xxxl: 3rem; 	// 64px
+	--fl1-spacing-xxl: 3rem; 	// 48px
+	--fl1-spacing-xl: 2.5rem; 	// 40px
+	--fl1-spacing-lg: 2rem; 	// 32px
+	--fl1-spacing-md: 1.5rem; 	// 24px
+	--fl1-spacing-sm: 1rem; 	// 16px
+	--fl1-spacing-xs: 0.5rem; 	// 8px
+	--fl1-spacing-xxs: 0.25rem; // 4px
+}

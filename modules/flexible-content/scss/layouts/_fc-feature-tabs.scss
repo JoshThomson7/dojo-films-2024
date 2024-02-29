@@ -1,0 +1,201 @@
+///
+/// Feature tabs
+/// 
+.fc_feature_tabs {
+
+    .feature-tabs {
+        background: var(--fl1-secondary);
+        border-radius: var(--fl1-radius-xxl);
+        padding: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+		@include breakpoint(grandmabear) {
+			flex-direction: column;
+		}
+
+		@include breakpoint(teenbear) {
+			padding: var(--fl1-spacing-xl) var(--fl1-spacing-lg);
+		}
+
+        figure {
+            width: 50%;
+            padding: var(--fl1-spacing-sm);
+            position: relative;
+            transform: translateX(-130px) scale(1.14);
+
+			@include breakpoint(grandmabear) {
+				transform: none;
+				margin: -126px 0 32px;
+			}
+
+			@include breakpoint(cousinbear) {
+				margin-top: -75px;
+			}
+
+            img { 
+                position: relative;
+                z-index: 2;
+                border-radius: var(--fl1-radius-xxl);
+            }
+            
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('img/avb-circles.svg');
+                background-size: 99%;
+                background-repeat: no-repeat;
+                background-position: center;
+                transform: rotate(180deg);
+            }
+        }
+
+        .tabbed-wrapper {
+            flex: 1;
+
+			h3 { 
+                font-size: 32px;
+                font-weight: 700;
+                color: #fff;
+                margin-bottom: 32px;
+
+				@include breakpoint(grandmabear) {
+					text-align: center;
+				}
+            }
+
+            h4 { 
+				display: none;
+				margin-bottom: 4px;
+				width: 100%;
+
+				a {
+					font-size: var(--fl1-font-xs);
+					color: #fff;
+					font-weight: 600;
+					padding: var(--fl1-spacing-sm);
+					border-radius: var(--fl1-radius-md);
+					background: rgba(255,255,255,0.1);
+					display: flex;
+					color: var(--fl1-white);
+					justify-content: space-between;
+				}
+
+				&.active a {
+					background: var(--fl1-primary);
+				}
+
+				@include breakpoint(cousinbear) {
+					display: block;
+				}
+            }
+
+            ul.tabbed {
+                display: flex;
+                margin: 0 0 32px;
+                padding: 0;
+
+				@include breakpoint(cousinbear) {
+					display: none;
+				}
+
+                li {
+                    list-style: none;
+                    margin: 0 4px;
+                    padding: 0;
+                    a {
+                        font-size: var(--fl1-font-xs);
+                        color: #fff;
+                        font-weight: 600;
+                        padding: 12px 24px;
+						border-radius: 40px;
+						background: rgba(255,255,255,0.1);
+						display: block;
+                    }
+                    
+                    &.active a {
+                        background: var(--fl1-primary);
+                    }
+                }
+
+				@include breakpoint(grandmabear) {
+					justify-content: center;
+				}
+            }
+            .tab__content {
+                p { 
+                    font-size: var(--fl1-font-sm);
+                    color: #fff;
+                    margin-bottom: var(--fl1-spacing-lg);
+
+                    &:last-of-type { 
+                        margin-bottom: 0;
+                    }
+
+					strong {
+						font-weight: 700;
+					}
+			
+					a { 
+						color: var(--fl1-white);
+						text-decoration: underline;
+						font-weight: 600;
+					}
+                }
+
+				@include breakpoint(grandmabear) {
+					text-align: center;
+				}
+
+				@include breakpoint(cousinbear) {
+					padding: var(--fl1-spacing-sm);
+				}
+
+				@include breakpoint(sisterbear) {
+					padding: var(--fl1-spacing-sm) 0;
+				}
+            }
+        }
+
+		&.no-image { 
+			.tabbed-wrapper { 
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+		}
+
+        &.center {
+            justify-content: center;
+            text-align: center;
+            
+            .tabbed-wrapper {
+                ul.tabbed { 
+                    justify-content: center;
+                }
+            }
+        }
+
+        &.right { 
+            flex-direction: row-reverse;
+
+            figure {
+                transform: translateX(130px) scale(1.14);
+            }
+        }
+
+        &.no-img {
+            .tabbed-wrapper {
+                width: 100%;
+            }
+        }
+    }
+
+}

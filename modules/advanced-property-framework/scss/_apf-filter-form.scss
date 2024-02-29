@@ -1,0 +1,293 @@
+/*
+*	Filter form
+*
+*	Styles for the search results filter
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+.apf__results__filter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--fl1-spacing-sm) .25rem 0 .25rem;
+	flex: 1;
+	margin-top: 5px;
+
+	@include breakpoint(mamabear) {
+		flex-direction: column;
+		padding: 0 5px 10px;
+		border: none;
+	}
+
+	a.apf__filter__refine {
+		display: none;
+		background-color: $secondary;
+		color: #fff;
+		font-size: 17px;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		font-weight: 700;
+		border-radius: var(--fl1-radius-lg);
+		padding: 15px 30px;
+		width: 100%;
+		margin-bottom: 20px;
+		@include breakpoint(grandmabear) {
+			display: block;
+		}
+	}
+
+	.apf__results__filter__view {
+		display: flex;
+		gap: var(--fl1-spacing-sm);
+
+		@include breakpoint(mamabear) {
+			width: 100%;
+			border-top: 1px solid var(--fl1-lightgrey)
+		}
+
+		a,
+		label {
+			display: block;
+			cursor: pointer;
+
+			@include breakpoint(mamabear) {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				margin-right: 0;
+				border-right: 1px solid var(--fl1-lightgrey);
+				padding: 15px 0;
+				&[for='apf_view_list'] {
+					border-right: none;
+				}
+			}
+
+			&.apf__map__hide {
+				@include breakpoint(brotherbear) {
+					display: none;
+				}
+			}
+
+			i {
+				font-size: 20px;
+				color: var(--fl1-text);
+				&::after {
+					font-size: 13px;
+					background: var(--fl1-primary);
+					padding: 5px 10px;
+					color: white;
+					position: relative;
+					bottom: -10px;
+					font-family: var(--fl1-primary-font);
+					border-radius: var(--fl1-radius-lg);
+				}
+
+				&.fa-th {
+					width: 24px;
+					height: 24px;
+
+					&:hover {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						margin-bottom: -22px;
+						margin-left: 0px;
+
+						&::after {
+							content: 'Grid';
+						}
+					}
+				}
+
+				&.fa-list {
+					width: 24px;
+					height: 24px;
+
+					&:hover {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						margin-bottom: -22px;
+						margin-left: 0px;
+
+						&::after {
+							content: 'List';
+						}
+					}
+				}
+
+				&.fa-map {
+					width: 27px;
+					height: 24px;
+
+					&:hover {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						margin-bottom: -22px;
+						margin-left: 0px;
+
+						&::after {
+							content: 'Map';
+						}
+					}
+				}
+			}
+
+			&[for='apf_view_map'] {
+				@include breakpoint(brotherbear) {
+					display: none;
+				}
+			}
+
+			&.active {
+				i {
+					color: var(--fl1-primary);
+				}
+			}
+
+			&.apf-mobile-search {
+				display: none;
+				@include breakpoint(brotherbear) {
+					display: flex;
+				}
+			}
+		}
+
+		input[type='checkbox'],
+		input[type='radio'] {
+			display: none;
+			&:checked + label i {
+				color: var(--fl1-primary);
+			}
+		}
+	}
+
+	.apf__results__filter__sort {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		@include breakpoint(mamabear) {
+			width: 100%;
+		}
+		@include breakpoint(teenbear) {
+			flex-wrap: wrap;
+		}
+
+		article {
+			padding: 0 10px;
+			@include breakpoint(teenbear) {
+				padding: 20px 10px;
+				width: 50%;
+			}
+			@include breakpoint(sisterbear) {
+				padding: 10px;
+				width: 100%;
+			}
+		}
+
+		form {
+			display: flex;
+			align-items: center;
+			@include breakpoint(mamabear) {
+				flex-direction: column-reverse;
+				width: 100%;
+			}
+		}
+
+		label {
+			color: var(--fl1-text);
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: 600;
+			@include breakpoint(papabear) {
+				font-size: 13px;
+			}
+			@include breakpoint(brotherbear) {
+				font-size: initial;
+			}
+			@include breakpoint(mamabear) {
+				width: 100%;
+				text-align: center;
+				padding-top: 10px;
+			}
+		}
+
+		input[type='checkbox'] {
+			display: none;
+
+			+ label:before {
+				font-family: 'Font Awesome 6 Pro';
+				display: inline-block;
+			}
+
+			+ label:before {
+				content: '\f058';
+				font-weight: 300;
+			}
+			+ label:before {
+				letter-spacing: 5px;
+				font-size: 22px;
+				position: relative;
+				top: 2px;
+			}
+
+			&:checked + label {
+				color: var(--fl1-secondary);
+			}
+			&:checked + label:before {
+				content: '\f058';
+				color: var(--fl1-primary);
+				font-weight: 800;
+			}
+			&:checked + label:before {
+				letter-spacing: 5px;
+				font-size: 22px;
+				position: relative;
+				top: 2px;
+			}
+		}
+
+		select {
+			font-family: var(--fl1-primary-font);
+			border: none;
+			padding: 16px 50px 13px 15px;
+			font-size: 16px;
+			color: var(--fl1-text);
+			border: 1px var(--fl1-border) solid;
+			background: url('../../img/select-arrow-down.png') no-repeat right center var(--fl1-white);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			background-position-x: 98%;
+			background-size: 24px;
+			cursor: pointer;
+			margin-left: 20px;
+			font-weight: 600;
+			border-radius: var(--fl1-radius-md);
+
+			@include breakpoint(papabear) {
+				font-size: 14px;
+				padding: 16px 30px 13px 15px;
+			}
+			@include breakpoint(brotherbear) {
+				font-size: initial;
+				width: 100%;
+			}
+			@include breakpoint(mamabear) {
+				margin-left: 0;
+				padding: 22px 30px 19px 15px;
+				background-color: #fff;
+				border-left: 1px solid var(--fl1-lightgrey);
+				border-right: 1px solid var(--fl1-lightgrey);
+				border-bottom: 1px solid var(--fl1-lightgrey);
+				border-top: 1px solid var(--fl1-lightgrey);
+				width: 50%;
+			}
+			@include breakpoint(teenbear) {
+				width: 100%;
+			}
+		}
+	}
+}

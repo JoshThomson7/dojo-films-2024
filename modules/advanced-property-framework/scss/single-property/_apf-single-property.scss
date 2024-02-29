@@ -1,0 +1,282 @@
+/*
+*	Single Property
+*
+*	Styles for the property details page.
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+.apf-single-property {
+	padding: 0;
+
+	/* Nav */
+	&--nav {
+		padding: var(--fl1-spacing-xs) 0;
+		position: relative;
+		border: none;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		@include breakpoint(mamabear) {
+			font-size: 16px;
+		}
+
+		a {
+			color: var(--fl1-secondary);
+			font-size: var(--fl1-font-xs);
+			text-transform: none;
+
+			i {
+				color: var(--fl1-secondary);
+			}
+		}
+
+		ul { 
+			display: flex;
+			align-items: center;
+
+			li {
+				a {
+					display: flex;
+					align-items: center;
+					gap: var(--fl1-spacing-xs);
+					font-size: var(--fl1-font-xxs);
+					color: var(--fl1-secondary);
+					padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+					border-radius: var(--fl1-radius-lg);
+
+					&:hover { 
+						background: var(--fl1-lightgrey);
+					}
+				}
+			}
+		}
+	}
+
+	@import 'apf-single-property-header';
+	@import 'apf-single-property-gallery';
+	
+	/* Content */
+	.apf__single__property__content__wrap {
+		display: flex;
+		padding-bottom: var(--fl1-spacing-xl);
+		justify-content: space-between;
+		align-items: flex-start;
+
+		@include breakpoint(papabear) {
+			flex-direction: column;
+			padding: 20px 0;
+		}
+
+		.apf__single__property__content {
+			flex: 1;
+			padding-right: var(--fl1-spacing-lg);
+
+			@include breakpoint(papabear) {
+				width: 100%;
+				padding: 0;
+			}
+
+			article {
+				border-bottom: 1px solid darken($lightgrey, 5%);
+				padding-bottom: var(--fl1-spacing-md);
+				margin-bottom: var(--fl1-spacing-md);
+
+				&:last-of-type {
+					border-bottom: none;
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+
+				h2 {
+					font-size: var(--fl1-font-md);
+					color: var(--fl1-secondary);
+					font-weight: 600;
+					margin-bottom: var(--fl1-spacing-sm);
+				}
+				h4 {
+					font-size: 17px;
+					color: var(--fl1-primary);
+					padding-bottom: 21px;
+				}
+
+				p {
+					font-size: var(--fl1-font-xs);
+					color: var(--fl1-text);
+					padding-bottom: var(--fl1-spacing-sm);
+					br {
+						&:first-of-type {
+							display: none;
+						}
+					}
+					strong {
+						font-weight: 400;
+					}
+
+					a { 
+						color: var(--fl1-primary);
+					}
+				}
+
+				a.apf__article__button {
+					display: inline-block;
+					padding: 10px 15px;
+					background: $text;
+					color: #fff;
+					font-size: 16px;
+					margin-right: 10px;
+					&:hover {
+						background: var(--fl1-primary);
+					}
+				}
+
+				/* Maps */
+				#map_single {
+					height: 400px;
+					overflow: hidden;
+					border-radius: var(--fl1-radius-lg);
+				}
+				#street_single {
+					height: 400px;
+					margin-top: 20px;
+				}
+
+				/* Gallery */
+				ul.property__gallery__all {
+					display: flex;
+					flex-wrap: wrap;
+
+					li {
+						width: 50%;
+						padding: 5px;
+						cursor: pointer;
+					}
+				}
+
+				&.apf__single__property__features {
+					border-bottom: 1px var(--fl1-border) solid;
+
+					ul {
+						display: flex;
+						flex-wrap: wrap;
+
+						li {
+							width: 50%;
+							padding-right: var(--fl1-spacing-sm);
+							font-size: var(--fl1-font-xs);
+							display: flex;
+							align-items: flex-start;
+							padding-bottom: var(--fl1-spacing-sm);
+							color: var(--fl1-text);
+
+							@include breakpoint(papabear) {
+								width: 100%;
+							}
+
+							&:before {
+								font-family: 'Font Awesome 6 Pro';
+								content: '\f058';
+								font-size: var(--fl1-font-xs);
+								margin-right: var(--fl1-spacing-xs); /*color:#72e437;*/
+								color: var(--fl1-primary);
+								font-weight: bold;
+							}
+						}
+					}
+				}
+
+				&.apf__brochure {
+					iframe {
+						width: 100%;
+						height: 523px;
+						@include breakpoint(mamabear) {
+							height: 260px;
+						}
+					}
+				}
+
+				&.floorplan {
+					.floorplan-items  {
+						display: flex;
+						flex-wrap: wrap;
+						gap: var(--fl1-spacing-sm);
+
+						figure {
+							cursor: pointer;
+							width: 45%;
+							background: var(--fl1-lightgrey);
+							padding: var(--fl1-spacing-md);
+							border-radius: var(--fl1-radius-lg);
+						}
+					}
+				}
+
+				&.epc {
+					.epc__graphics {
+						img {
+							max-height: 365px;
+							width: auto;
+						}
+					}
+				}
+
+				&.apf__brochure {
+					.apf__brochure__pdf {
+						display: flex;
+						.apf__brochure__pdf__img {
+							width: 300px;
+							margin-right: 20px;
+							padding: 20px;
+							background: $lightgrey;
+							img {
+								margin-bottom: 20px;
+							}
+
+							h4 {
+								font-size: 18px;
+							}
+							h5 {
+								font-size: 22px;
+								color: var(--fl1-primary);
+								font-weight: 700;
+							}
+						}
+					}
+
+					.apf__brochure__action {
+						width: 300px;
+						p {
+							font-size: 18px;
+							margin-bottom: 20px;
+							span {
+								color: var(--fl1-primary);
+							}
+						}
+						a {
+							background: var(--fl1-primary);
+							font-size: 15px;
+							color: #fff;
+							border-radius: var(--fl1-radius-sm);
+							&:hover {
+								background: lighten($primary, 5%);
+							}
+						}
+					}
+				}
+			}
+
+			article ul.property__gallery__all:hover > li:hover a {
+				transition: all, 0.4s, ease-in-out;
+				opacity: 1;
+			}
+			article ul.property__gallery__all:hover > li:not(:hover) a {
+				transition: all, 0.4s, ease-in-out;
+				opacity: 0.2;
+			}
+		}
+
+		@import 'apf-single-property-sidebar';
+	}
+}

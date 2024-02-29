@@ -1,0 +1,96 @@
+/*
+*	APF Book a viewing
+*
+*	Styles for the arrange a viewing form.
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+.apf__book__viewing__form {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	z-index: 150;
+	transition: all 0.4s ease;
+	visibility: hidden;
+	opacity: 0;
+	-ms-overflow-y: scroll;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	display: flex;
+	flex-direction: column;
+	background: rgba(black, 0.6);
+	backdrop-filter: blur(10px);
+
+	@include breakpoint(mamabear) {
+		display: block;
+	}
+
+	.apf__book__viewing__form__wrapper {
+		padding: var(--fl1-spacing-xxl);
+		background: #fff;
+		margin: var(--fl1-spacing-xxl) auto;
+		max-width: 48rem;
+		position: relative;
+		transform: scale3d(0.7, 0.7, 0.7);
+		transition: all 0.4s ease;
+		border-radius: var(--fl1-radius-xl);
+		border: 1px solid var(--fl1-border);
+		box-shadow: 0px 0 25px rgba(0, 0, 0, 0.2);
+		@include breakpoint(mamabear) {
+			margin: 10px 0;
+			padding: 80px 20px;
+		}
+
+		a.close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			font-size: 32px;
+			color: $text;
+			&:hover {
+				color: var(--fl1-primary);
+			}
+		}
+
+		& > h2 {
+			font-size: var(--fl1-font-xxl);
+			color: var(--fl1-secondary);
+			font-weight: 600;
+			text-align: center;
+		}
+		& > h3 {
+			font-size: 17px;
+			color: var(--fl1-text);
+			display: block;
+			margin-top: 10px;
+			padding-top: 10px;
+			padding-bottom: 30px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid darken($lightgrey, 5%);
+			text-align: center;
+			strong {
+				font-size: 18px;
+				color: var(--fl1-text);
+				font-weight: 700;
+				display: block;
+				padding-top: 4px;
+			}
+		}
+	}
+
+	/* Open */
+	&.open {
+		transition: all 0.4s ease;
+		visibility: visible;
+		opacity: 1;
+		.apf__book__viewing__form__wrapper {
+			transition: all 0.4s ease;
+			transform: scale3d(1, 1, 1);
+		}
+	}
+}

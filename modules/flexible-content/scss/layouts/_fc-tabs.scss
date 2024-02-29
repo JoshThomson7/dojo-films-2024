@@ -1,0 +1,199 @@
+/*
+---------------------------
+  ______      __
+ /_  __/___ _/ /_  _____
+  / / / __ `/ __ \/ ___/
+ / / / /_/ / /_/ (__  )
+/_/  \__,_/_.___/____/
+
+---------------------------
+Tabs
+*/
+
+.fc_tabs {
+    &.grey {
+        ul.tabbed {
+            li {
+                &.active a {
+                    background: #fff;
+                }
+            }
+        }
+
+        .tab__content {
+            background: #fff;
+        }
+    }
+
+    .tabbed-wrapper {
+        ul.tabbed {
+            background: #fff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+            border-radius: var(--fl1-radius-sm);
+
+            display: flex;
+            align-items: center;
+
+			@include breakpoint(cousinbear) {
+				overflow-x: auto;
+				-ms-overflow-style: none;  /* IE and Edge */
+  				scrollbar-width: none;  /* Firefox */
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+
+            li {
+                margin: 0 5px;
+				@include breakpoint(cousinbear) {
+					min-width: 100px;
+
+					&:first-child {
+						min-width: 140px;
+					}
+				}
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: var(--fl1-secondary);
+                    padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+            		border-radius: var(--fl1-radius-sm);
+					font
+
+                    figure {
+                        margin-right: 8px;
+                        img {
+                            mix-blend-mode: multiply;
+                            height: 32px;
+                        }
+                    }
+
+                    strong {
+                        font-size: var(--fl1-font-xs);
+                        font-weight: 600;
+                    }
+                }
+
+                &.active,
+                &:hover {
+                    a {
+                        background: var(--fl1-secondary-light);
+                    }
+                }
+            }
+        }
+
+        .tab__content {
+            padding: var(--fl1-spacing-lg) var(--fl1-spacing-md);
+            display: flex;
+            flex-direction: column;
+
+			@include breakpoint(cousinbear) {
+				padding: var(--fl1-spacing-lg) 0;
+			}
+
+            p {
+                font-size: var(--fl1-font-sm);
+                line-height: 1.9;
+                margin-bottom: var(--fl1-spacing-sm);
+                color: var(--fl1-text)Light;
+
+				
+            }
+
+            a.button { 
+                margin-top: 26px;
+            }
+        }
+
+        &.vertical {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+
+            ul.tabbed {
+                max-width: 520px;
+                flex: 1;
+                justify-content: unset;
+                align-items: unset;
+                flex-direction: column;
+                top: 0;
+                min-width: 250px;
+                @include breakpoint(brotherbear) {
+                    max-width: 100%;
+                    padding-bottom: 50px;
+                    min-width: auto;
+                }
+
+                li {
+                    margin: 0 0 10px;
+                    a {
+                        width: 100%;
+                        border: none;
+                        text-align: left;
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+            .tab__content {
+                width: 70%;
+                border: none;
+                padding: 0 80px 0 0;
+                @include breakpoint(brotherbear) {
+                    padding: 0 40px 0 0;
+                    width: 100%;
+                }
+            }
+
+            &.left {
+                justify-content: space-between;
+                flex-direction: row;
+                @include breakpoint(brotherbear) {
+                    flex-direction: column;
+                }
+                ul.tabbed {
+                    margin-right: 40px;
+                    @include breakpoint(brotherbear) {
+                        margin-right: 0;
+                    }
+                }
+            }
+            &.right {
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                @include breakpoint(brotherbear) {
+                    flex-direction: column;
+                }
+                ul.tabbed {
+                    margin-left: 40px;
+                    @include breakpoint(brotherbear) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        &.content {
+            &-left { 
+                .tab__content { 
+                    align-items: flex-start;
+                }
+            }
+            &-right { 
+                .tab__content { 
+                    align-items: flex-end;
+                }
+            }
+            &-center { 
+                .tab__content { 
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+/*
+------------------------------------------------
+   ______      ____
+  / ____/___ _/ / /__  _______  __
+ / / __/ __ `/ / / _ \/ ___/ / / /
+/ /_/ / /_/ / / /  __/ /  / /_/ /
+\____/\__,_/_/_/\___/_/   \__, /
+                         /____/
+------------------------------------------------
+Gallery
+*/
+
+.fc_gallery {
+	.lSSlideOuter {
+		margin: 0 -8px;
+	}
+
+	ul.gallery__images {
+		margin: 0 -8px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		clear: both;
+		padding: 0;
+
+		li {
+			list-style: none;
+			padding: var(--fl1-spacing-xs);
+			margin: 0;
+			/* Full */
+			&.full__width {
+				width: 100%;
+			}
+
+			/* Half */
+			&.one__half {
+				width: math.percentage(math.div(1, 2));
+				@include breakpoint(babybear) {
+					width: 100%;
+				}
+			}
+
+			/* One third */
+			&.one__third {
+				width: math.percentage(math.div(1, 3));
+				@include breakpoint(sisterbear) {
+					width: math.percentage(math.div(1, 2));
+				}
+				@include breakpoint(babybear) {
+					width: 100%;
+				}
+			}
+
+			/* One fourth */
+			&.one__fourth {
+				width: math.percentage(math.div(1, 4));
+				@include breakpoint(mamabear) {
+					width: math.percentage(math.div(1, 3));
+				}
+				@include breakpoint(sisterbear) {
+					width: math.percentage(math.div(1, 2));
+				}
+				@include breakpoint(babybear) {
+					width: 100%;
+				}
+			}
+
+			/* One fifth */
+			&.one__fifth {
+				width: math.percentage(math.div(1, 5));
+				@include breakpoint(brotherbear) {
+					width: math.percentage(math.div(1, 4));
+				}
+				@include breakpoint(mamabear) {
+					width: math.percentage(math.div(1, 3));
+				}
+				@include breakpoint(sisterbear) {
+					width: math.percentage(math.div(1, 2));
+				}
+				@include breakpoint(babybear) {
+					width: 100%;
+				}
+			}
+
+			img {
+				width: 100%;
+			}
+
+			a {
+				overflow: hidden;
+				display: block;
+				position: relative;
+				border-radius: var(--fl1-radius-xl);
+				img {
+					transition: all 0.2s ease-in-out;
+				}
+
+				.overlay {
+					transition: all 0.2s ease-in-out;
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 2;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: rgba(0, 0, 0, 0.67);
+
+					i {
+						font-size: 60px;
+						color: #fff;
+					}
+				}
+			}
+
+			&:hover {
+				a {
+					.overlay {
+						opacity: 1;
+					}
+					img {
+						transform: scale3d(1.1, 1.1, 1.1);
+					}
+				}
+			}
+		}
+	}
+}

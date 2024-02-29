@@ -1,0 +1,133 @@
+/*
+*	Pagination
+*/
+
+/* Pagination */
+.pagination {
+	font-size: var(--fl1-font-xs);
+	line-height: 13px;
+	overflow: hidden;
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	@include breakpoint(ipad_p) {
+		padding: 0 10px;
+	}
+
+	.page__count {
+		padding: 14px 0;
+		color: var(--fl1-text);
+	}
+	.page__numbers {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-left: auto;
+	}
+
+	span,
+	a {
+		border-radius: 3px;
+	}
+
+	span {
+		display: block;
+		margin: 0;
+		text-decoration: none;
+		width: auto;
+		color: var(--fl1-text);
+		padding: 14px;
+		&:first-child {
+			padding: 10px 12px 10px;
+		}
+	}
+
+	a {
+		padding: 10px 12px 10px;
+		display: block;
+		margin: 0;
+		text-decoration: none;
+		width: auto;
+		color: var(--fl1-text);
+		&:first-child {
+			padding: 10px 12px 10px;
+		}
+		&:hover {
+			background: var(--fl1-primary);
+			color: #fff;
+		}
+	}
+
+	.current__page {
+		padding: 10px 12px 10px;
+		background: var(--fl1-primary);
+		color: #fff;
+	}
+}
+
+.ajax-pagination {
+	font-size: var(--fl1-font-xs);
+	line-height: 13px;
+	overflow: hidden;
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	@include breakpoint(ipad_p) {
+		padding: 0 10px;
+	}
+
+	&--count {
+		padding: 14px 0;
+		color: var(--fl1-text);
+	}
+	&--numbers {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-left: auto;
+	}
+
+	span,
+	a {
+		border-radius: 3px;
+	}
+
+	a {
+		padding: 10px 12px 10px;
+		display: block;
+		margin: 0;
+		text-decoration: none;
+		width: auto;
+		color: var(--fl1-text);
+		&:first-child {
+			padding: 10px 12px 10px;
+		}
+		&:hover {
+			background: var(--fl1-primary);
+			color: #fff;
+		}
+	}
+
+	span {
+		display: block;
+		margin: 0;
+		text-decoration: none;
+		width: auto;
+		color: var(--fl1-text);
+		padding: 14px;
+		&:first-child {
+			padding: 10px 12px 10px;
+		}
+
+		&.ajax-pagination--current-page {
+			padding: 10px 12px 10px;
+			background: var(--fl1-primary);
+			color: #fff;
+		}
+	}
+}

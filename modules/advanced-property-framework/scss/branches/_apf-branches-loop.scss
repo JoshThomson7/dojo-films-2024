@@ -1,0 +1,252 @@
+/*
+*	APF Branches
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+.branch {
+	border-radius: var(--fl1-radius-xxl);
+	box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.1);
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px $lightgrey solid;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: var(--fl1-spacing-xl);
+	@include breakpoint(cousinbear) {
+		flex-direction: column;
+	}
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	h2 {
+		font-size: 29px;
+		color: var(--fl1-text);
+		font-weight: 700;
+		padding-bottom: 20px;
+		margin: 0;
+		flex: 1 0 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-transform: none;
+		a {
+			color: var(--fl1-text);
+		}
+		span a {
+			font-size: 16px;
+			color: var(--fl1-primary);
+			padding-left: 20px;
+			text-transform: none;
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+			&:hover {
+				color: var(--fl1-primary);
+			}
+			i {
+				color: $secondary;
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.branch-thumb {
+		width: 40%;
+		padding-right: 20px;
+		@include breakpoint(brotherbear) {
+			width: 30%;
+		}
+		@include breakpoint(cousinbear) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		a {
+			display: block;
+			overflow: hidden;
+		}
+
+		img {
+			border-radius: var(--fl1-radius-lg);
+		}
+	}
+
+	.branch-details {
+		width: 60%;
+		padding-left: 20px;
+		display: flex;
+		justify-content: space-between;
+		flex: 1 0 auto;
+		@include breakpoint(cousinbear) {
+			width: 100%;
+			padding-left: 0;
+		}
+		@include breakpoint(sisterbear) {
+			flex-direction: column;
+		}
+
+		h3 {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 18px;
+			color: var(--fl1-secondary);
+			font-weight: 600;
+			margin-bottom: var(--fl1-spacing-sm);
+
+			small {
+				display: block;
+				font-size: .75rem;
+				padding: 2px 8px 2px;
+				text-transform: uppercase;
+				color: #fff;
+				font-weight: 700;
+				border-radius: var(--fl1-radius-sm);
+				&.open {
+					background: var(--fl1-success);
+				}
+				&.closing-soon {
+					background: var(--fl1-warning);
+					color: var(--fl1-text);
+				}
+				&.closed {
+					background: var(--fl1-error);
+				}
+			}
+		}
+
+		p {
+			font-size: 17px;
+			padding: 0 0 30px 0;
+			color: var(--fl1-text);
+			position: relative;
+			margin: 0;
+			display: flex;
+			gap: var(--fl1-spacing-xs);
+			i {
+				font-size: var(--fl1-font-xs);
+				color: var(--fl1-primary);
+				position: relative;
+				top: 5px;
+			}
+			a {
+				color: var(--fl1-text);
+				&:hover {
+					color: var(--fl1-primary);
+				}
+			}
+		}
+
+		.branch-address {
+			width: percentage(1/2);
+			@include breakpoint(sisterbear) {
+				width: 100%;
+			}
+
+			.branch-dept__details {
+				margin-bottom: 10px;
+			}
+		}
+
+		.branch-hours {
+			width: percentage(1/2);
+			@include breakpoint(sisterbear) {
+				width: 100%;
+			}
+
+			ul {
+				li {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: var(--fl1-spacing-xs) 0 var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+					span {
+						&.times {
+							color: var(--fl1-text);
+						}
+					}
+
+					&.today {
+						color: var(--fl1-secondary);
+						font-weight: 700;
+						position: relative;
+						border-radius: var(--fl1-radius-lg);
+						&:after {
+							content: '';
+							display: block;
+							width: 4px;
+							border-radius: var(--fl1-radius-lg);
+							height: 70%;
+							position: absolute;
+							left: 0;
+							top: 50%;
+							transform: translateY(-50%);
+						}
+
+						span {
+							&.times {
+								color: var(--fl1-secondary);
+							}
+						}
+
+						&.open {
+							&:after {
+								background: var(--fl1-success);
+							}
+						}
+
+						&.closed {
+							&:after {
+								background: var(--fl1-error);
+							}
+						}
+
+						&.closing-soon {
+							&:after {
+								background: var(--fl1-warning);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.hours-table {
+		overflow: hidden;
+	}
+}
+
+/* Single branch */
+.branch-map {
+	width: 100%;
+	height: 323px;
+}
+.branch-details.single {
+	width: auto;
+}
+.branch-details.single .branch-address {
+	width: auto;
+	float: none;
+	border-bottom: 1px #f0f0f0 solid;
+	margin-bottom: 20px;
+}
+.branch-details.single .branch-hours {
+	width: auto;
+	float: none;
+	margin-bottom: 20px;
+}
+
+.branch-members {
+	padding-bottom: 20px;
+}
+.branch-member {
+	float: left;
+	width: 145px;
+	margin: 0 10px 10px 0;
+}

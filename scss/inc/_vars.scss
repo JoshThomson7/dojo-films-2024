@@ -1,0 +1,22 @@
+// Fonts
+$primaryFont: 'Sora Regular', sans-serif;
+$secondaryFont: 'Objectivity', sans-serif;
+$headingFont: 'Sora Bold'; 
+$baseFontSize: 16px;
+$baseFontColor: #5F6572;
+
+// Colours
+$primary: #192953;
+$primaryLight: #F6F2FD;
+$secondary: #E0485B;
+$tertiary: #4891E1;
+$quaternary: #CAD507;
+$lightgrey: #eef0fb;
+$text: $baseFontColor;
+$textLight: #caced5;
+$border: #d6dbe1;
+$white: #fff;
+$borderDark: lighten($text, 35%);
+$success: #64c82d;
+$warning: #ffc458;
+$error: tomato;

@@ -1,0 +1,333 @@
+/*
+--------------------------------------------
+    ______           __
+   / ____/__  ____ _/ /___  __________
+  / /_  / _ \/ __ `/ __/ / / / ___/ _ \
+ / __/ /  __/ /_/ / /_/ /_/ / /  /  __/
+/_/    \___/\__,_/\__/\__,_/_/   \___/
+
+-------------------------------------------
+Feature
+*/
+.fc_feature,
+.fc_feature_accordion {
+
+	.fc_feature_wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+
+		@include breakpoint(brotherbear) {
+			flex-direction: column;
+		}
+
+		.feature__text {
+			width: math.percentage(math.div(1, 2));
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			@include breakpoint(grandmabear) {
+				border-left: 20px solid transparent;
+			}
+
+			@include breakpoint(brotherbear) {
+				width: 100% !important;
+			}
+
+
+			@include breakpoint(brotherbear) {
+				width: 100%;
+				border-left: none;
+			}
+
+			h3 {
+				font-size: 34px;
+				font-weight: 700;
+				color: var(--fl1-primary);
+				margin-bottom: 20px;
+
+				@include breakpoint(teenbear){
+					line-height: 1.1; margin-top: 10px;
+				}
+			}
+			h5 {
+				font-size: 20px;
+				font-weight: 600;
+				margin-bottom: 0;
+				color: var(--fl1-primary);
+				text-transform: uppercase;
+				line-height: normal;
+			}
+
+			li,
+			p {
+				font-size: var(--fl1-font-sm);
+				color: var(--fl1-text);
+				margin-bottom: var(--fl1-font-md);
+				font-weight: 400;
+
+				a {
+					color: var(--fl1-primary);
+					font-weight: 600;
+				}
+
+				strong {
+					font-weight: 600;
+				}
+			}
+
+			ul,
+			ol {
+				padding-left: 32px;
+				margin-bottom: 16px;
+				li {
+					margin-bottom: 8px;
+					line-height: 24px;
+				}
+			}
+
+			ul {
+				list-style: disc;
+			}
+
+			ol {
+				list-style: decimal;
+			}
+
+			.feature__action {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				margin-top: var(--fl1-spacing-sm);
+				gap: var(--fl1-spacing-lg);
+
+				a:not(.button):not(.dropdown) {
+					color: var(--fl1-primary);
+					text-decoration: underline;
+				}
+
+				&-dropdown {
+					display: none;
+					background: #fff;
+					flex-direction: column;
+					gap: var(--fl1-spacing-xs);
+					justify-content: center;
+					text-align: center;
+
+					a {
+						font-size: 14px;
+						text-transform: uppercase;
+						text-align: left;
+						font-weight: 600;
+						padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+						color: var(--fl1-secondary);
+					}
+
+					&.is-active { 
+						display: flex;
+					}
+				}
+			}
+		}
+
+		.feature__image {
+			position: relative;
+			flex: 1;
+
+			@include breakpoint(brotherbear) {
+				flex: unset;
+				width: 100%;
+			}
+
+			&-expand { 
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				display: none;
+
+				@include breakpoint(grandpabear) {
+					display: block;
+				}
+
+				@include breakpoint(brotherbear) {
+					display: none;
+				}
+			}
+
+			img { 
+				// @include breakpoint(grandpabear) {
+				// 	display: none;
+				// }
+
+				@include breakpoint(brotherbear) {
+					display: block;
+				}
+			}
+
+			&-video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				a {
+					width: 7rem;
+					height: 7rem;
+					font-size: var(--fl1-font-xxxl);
+					color: var(--fl1-primary);
+					background: var(--fl1-white);
+					border-radius: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					box-shadow: 0 0 3rem rgba(0,0,0,.9);
+					transition: all 0.3s ease;
+
+					&::before { 
+						position: relative;
+						left: 2px;
+					}
+
+					&:hover {
+						transform: scale(1.05);
+						transition: all 0.3s ease;
+					}
+				}
+			}
+
+			&:hover {
+				a {
+					figure {
+						transition: all 0.4s ease;
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+
+		&.left {
+			.feature__text {
+				padding-left: var(--fl1-spacing-xxxl);
+				padding-right: calc((100vw - 1172px) / 2);
+
+				@include breakpoint(grandpabear) {
+					padding: var(--fl1-spacing-xxxl);
+				}
+
+				@include breakpoint(mamabear) {
+					padding: var(--fl1-spacing-lg); border-left: 0;
+				}
+			}
+		}
+		&.right {
+			flex-direction: row-reverse;
+			.feature__text {
+				padding-right: var(--fl1-spacing-xxxl);
+				padding-left: calc((100vw - 1172px) / 2);
+
+				@include breakpoint(grandpabear) {
+					padding: var(--fl1-spacing-xxxl);
+				}
+
+				@include breakpoint(mamabear) {
+					padding: var(--fl1-spacing-lg);
+				}
+			}
+		}
+
+	}
+
+	/// Contained
+	.max__width {
+		.fc_feature_wrapper {
+			align-items: center;
+			.feature__text {
+				padding-left: 0;
+			}
+
+			.feature__image {
+				border-right: 40px solid transparent;
+				// overflow: hidden;
+				flex: 1;
+				position: sticky;
+				top: 20px;
+
+				&::before {
+					content: "";
+					background-image: url(/wp-content/themes/withington-baths-2024/img/heart-logo.png);
+					background-size: contain;
+					background-repeat: no-repeat;
+					display: block;
+					position: absolute;
+					top: -5%; 
+					left: -20%;
+					width: 200px;
+					height: 200px;
+				}
+
+				img { 
+					border-radius: var(--fl1-radius-xxl);
+				}
+
+				@include breakpoint(grandmabear) {
+					border-right: 20px solid transparent;
+				}
+
+				@include breakpoint(brotherbear) {
+					margin-bottom: 20px;
+					width: 100%;
+					border-right: none;
+					border-radius: 5px !important;
+					display: block;
+					top: auto;
+				}
+			}
+
+			.feature__text {
+				border-left: 40px solid transparent;
+				@include breakpoint(teenbear){border-left: 0;}
+			}
+
+			&.right {
+				.feature__text {
+					border-right: 40px solid transparent;
+					border-left: none;
+
+					@include breakpoint(brotherbear) {
+						border: none;
+					}
+				}
+
+				.feature__image {
+					//order: 1;
+					border-left: 40px solid transparent;
+					border-right: none;
+
+					@include breakpoint(grandmabear) {
+						border-left: 20px solid transparent;
+					}
+					@include breakpoint(brotherbear) {
+						width: 100%;
+						order: 0;
+						border-left: none;
+					}
+				}
+			}
+
+			&.left,
+			&.right {
+				.feature__text {
+					padding-right: 0;
+					padding-left: 0;
+				}
+			}
+		}
+	} // .max__width
+}

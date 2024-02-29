@@ -1,0 +1,153 @@
+/*
+    Feature
+*/
+.fc_feature_boxes_wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 -1.5rem;
+	
+	@include breakpoint(brotherbear) {
+		flex-direction: column;
+	}
+
+	article {
+		width: math.percentage(math.div(1, 3));
+		transition: all 0.3s ease;
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint(brotherbear) {
+			width: 100%;
+		}
+
+		.fc__feature__box__inner {
+			padding: var(--fl1-spacing-lg);
+			display: flex;
+			flex-direction: column;
+			margin: var(--fl1-spacing-sm);
+			transition: all 0.3s ease;
+			transform: scale3d(1, 1, 1);
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			border-radius: var(--fl1-spacing-lg);
+			gap: var(--fl1-spacing-md);
+			word-break: break-word;
+
+			h3 {
+				font-size: var(--fl1-font-lg);
+				color: var(--fl1-secondary);
+				font-weight: 700;
+				display: flex;
+				flex-direction: column;
+
+				a {
+					color: var(--fl1-secondary);
+					&:hover {
+						color: var(--fl1-primary);
+					}
+				}
+
+				figure {
+					margin-bottom: var(--fl1-spacing-lg);
+					
+					i {
+						font-size: 37px;
+						color: var(--fl1-primary);
+						transition: all 0.3s ease;
+						&:after {
+							color: #00a0dd;
+							opacity: 0.7;
+						}
+					}
+				}
+			}
+
+			p {
+				font-size: var(--fl1-font-sm);
+				color: var(--fl1-text);
+				font-weight: 400;
+				strong {
+					font-weight: 700;
+				}
+
+				a { 
+					color: var(--fl1-primary);
+					font-weight: 600;
+				}
+			}
+
+			a.link {
+				font-size: 16px;
+				font-weight: bold;
+				color: var(--fl1-primary);
+				display: flex;
+				align-items: center;
+				align-self: flex-start;
+				margin-top: auto;
+
+				i {
+					font-size: var(--fl1-font-sm);
+					margin-left: var(--fl1-spacing-sm);
+				}
+
+				&:hover {
+					i {
+						&::before {
+							content: "\f061";
+						}
+					}
+				}
+			}
+		}
+
+		// variants
+		&.full__width {
+			width: 100%;
+		}
+		&.one__half {
+			width: math.percentage(math.div(1, 2));
+			@include breakpoint(brotherbear) {
+				width: 100%;
+			}
+		}
+		&.one__third {
+			width: math.percentage(math.div(1, 3));
+			@include breakpoint(brotherbear) {
+				width: 100%;
+			}
+		}
+		&.one__fourth {
+			width: math.percentage(math.div(1, 4));
+			@include breakpoint(brotherbear) {
+				width: 100%;
+			}
+		}
+		&.one__fifth {
+			width: math.percentage(math.div(1, 5));
+			@include breakpoint(brotherbear) {
+				width: 100%;
+			}
+
+			.fc__feature__box__inner {
+				padding: 8px;
+			}
+		}
+
+		&.with-bg {
+			.fc__feature__box__inner {
+				background: var(--fl1-white);
+				box-shadow: 0 0 10px rgba(0,0,0,.1);
+				border-radius: var(--fl1-radius-lg);
+			}
+		}
+
+		&.center {
+			.fc__feature__box__inner {
+				text-align: center;
+				align-items: center;
+			}
+		}
+	}
+}

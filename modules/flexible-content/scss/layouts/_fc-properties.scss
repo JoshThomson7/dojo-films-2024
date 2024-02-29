@@ -1,0 +1,62 @@
+/// FC Properties
+
+// .fc_properties {
+// 	.max__width {
+// 		all: unset;
+// 	}
+
+// 	.fc-layout-heading {
+// 		max-width: 1200px;
+// 		margin: 0 auto;
+// 		width: 100%;
+// 		padding: 0 20px;
+// 	}
+
+// 	.slick-list {
+//         padding-left: calc((100vw - 1200px) / 2) !important;
+//         padding-right: calc((100vw - 1200px) / 2) !important;
+//     }
+
+//     .slick-dots { position: static; bottom: 0;
+//         li { margin-bottom: 0;
+//             button:before { color: #fff; font-size: 15px;}
+    
+//             &.slick-active { 
+//                 button:before { opacity: 1; color: #fff;}
+//             }
+//         }
+//     }
+// }
+
+.fc-properties {
+
+	&-tabs {
+		margin: var(--fl1-spacing-md) 0 var(--fl1-spacing-lg);
+
+		ul {
+			display: flex;
+			gap: var(--fl1-spacing-xxs);
+			
+			li {
+				a { 
+					display: block;
+					padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+					color: var(--fl1-secondary);
+					border-radius: var(--fl1-radius-lg);
+					font-size: var(--fl1-font-xxs);
+					font-weight: 600;
+
+					&:hover {
+						background: var(--fl1-lightgrey);
+					}
+
+					&.active {
+						background: var(--fl1-primary);
+						color: var(--fl1-white);
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,186 @@
+/*
+*	Property search map infowindow
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+#infowindow {
+	position: absolute;
+	z-index: 10;
+	background: rgba(255, 255, 255, 0.9);
+	top: 65px;
+	box-shadow: 0 0 12px rgba(0,0,0,.2);
+	overflow: hidden;
+	width: 300px;
+	border-radius: var(--fl1-radius-lg);
+	height: auto;
+	transition: all, 0.4s, ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.4s ease;
+
+	&.open {
+		right: 12px;
+		visibility: visible;
+		opacity: 1;
+		transition: all 0.4s ease;
+		@include breakpoint(mamabear) {
+			bottom: 100px;
+			top: auto;
+		}
+	}
+
+	&.closed {
+		right: -100%;
+	}
+
+	@include breakpoint(mamabear) {
+		width: 100%;
+		height: auto;
+		border-bottom: 1px solid $lightgrey;
+		box-shadow: 0, 0, 0, rgba(0, 0, 0, 0);
+	}
+
+	.infowindow__img {
+		position: relative;
+		@include breakpoint(mamabear) {
+			width: 40%;
+			float: left;
+			margin-right: 10px;
+		}
+
+		.infowindow-close {
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			background: rgba(0,0,0,0.85);
+			top: 8px;
+			right: 8px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include breakpoint(mamabear) {
+				display: none;
+			}
+
+			i {
+				color: #fff;
+				font-size: 20px;
+			}
+
+			&:hover {
+				background: lighten($secondary, 3%);
+			}
+		}
+	}
+
+	h3 {
+		font-size: 16px;
+		padding: 10px 20px 0;
+		margin: 0;
+		color: var(--fl1-text);
+		position: relative;
+		@include breakpoint(mamabear) {
+			padding: 5px 0;
+			font-size: 13px;
+		}
+
+		a {
+			color: var(--fl1-secondary);
+			font-size: 21px;
+			font-weight: 700;
+			@include breakpoint(mamabear) {
+				font-size: 19px;
+			}
+		}
+
+		span {
+			display: inline-block;
+			background: $secondary;
+			color: #fff;
+			padding: 5px 10px;
+			margin-right: -10px;
+			font-size: 12px;
+			font-weight: 600;
+			@include breakpoint(mamabear) {
+				margin-right: 0;
+			}
+		}
+
+		small {
+			font-size: 16px;
+		}
+
+		strong {
+			display: block;
+			color: var(--fl1-text);
+			font-size: 14px;
+			@include breakpoint(mamabear) {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.infowindow__content {
+		padding: 0 20px 20px;
+		h5 {
+			font-size: 16px;
+			margin: 0 0 4px;
+			color: $secondary;
+			font-weight: 600;
+			@include breakpoint(mamabear) {
+				font-size: 12px;
+				margin: 0 0 5px;
+			}
+		}
+
+		p {
+			color: var(--fl1-text-light);
+			margin: 0 0 10px;
+			font-size: 13px;
+			@include breakpoint(mamabear) {
+				display: none;
+			}
+
+			&.infowindow__content__name-mobile {
+				display: none;
+				@include breakpoint(mamabear) {
+					display: block;
+					font-size: 12px;
+					@include text-truncate;
+				}
+			}
+		}
+	}
+
+	.infowindow__fom {
+		font-size: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 20px;
+		border-radius: var(--fl1-radius-sm);
+		width: 100%;
+		color: #fff;
+		text-transform: uppercase;
+		background: var(--fl1-primary);
+		margin-right: 5px;
+		margin-top: 20px;
+
+		@include breakpoint(mamabear) {
+			display: none;
+		}
+
+		&:hover {
+			background: lighten($secondary, 3%);
+		}
+	}
+
+	p.empty-text {
+		text-align: center;
+		color: lighten($text, 30%);
+		margin: 35px 0 0;
+	}
+}

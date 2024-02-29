@@ -1,0 +1,481 @@
+/**
+ * AVB Styles
+ *
+ * @package advanced-video-banners/
+ * @dependency slick.js
+ * @version 1.0
+*/
+
+section.avb {
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	.avb-banners {
+		position: relative;
+		width: 100%;
+
+		.show-on-mobile {
+			display: none;
+			@include breakpoint(cousinbear) {
+				display: block;
+			}
+		}
+
+		.hide-on-mobile {
+			display: block;
+			@include breakpoint(cousinbear) {
+				display: none;
+			}
+		}
+
+		&.avb-home {
+			.avb-banner {
+				@include breakpoint(cousinbear) {
+					align-items: center;
+				}
+			}
+		}
+
+		.avb-banner {
+			position: relative;
+			display: flex;
+			align-items: center;
+			min-height: 35rem;
+			height: 100vh; 
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			transform: translateZ(0) scale(1, 1);
+			-webkit-transform: translateZ(0) scale(1, 1);
+			overflow: hidden;
+
+			@include breakpoint(papabear) {
+				// height: auto;
+				// min-height: 200px;
+			}
+
+			@for $i from 25 through 100 {
+				&.avb-#{$i}vh {
+					height: #{$i}vh;
+				}
+			}
+
+			// Caption
+			.avb-banner__caption {
+				position: relative;
+				z-index: 2;
+				display: flex;
+				align-items: center;
+				width: 100%;
+				padding: 6rem 0 0;
+
+				@include breakpoint(cousinbear) {
+					padding: 3rem 0;
+					.max__width {
+						height: 100%;
+					}
+				}
+
+				@include breakpoint(teenbear) {
+					padding: 5rem 0 0;
+				}
+
+				.max__width{display: flex; justify-content: space-between;}
+
+				.avb-banner__caption-wrap {
+					width: 47%;
+
+					figure {
+						margin-bottom: 20px;
+
+						@include breakpoint(cousinbear) {
+							display: flex;
+							justify-content: center;
+						}
+
+						img {
+							height: 75px;
+							width: auto;
+
+							@include breakpoint(cousinbear) {
+								height: 65px;
+							}
+						}
+
+						&.small {
+							margin-bottom: 8px;
+							img {
+								height: 35px;
+							}
+						}
+					}
+
+					@include breakpoint(cousinbear) {
+						width: 100%;
+						margin-bottom: 5px;
+					}
+				}
+
+				h1,
+				h2 {
+					font-size: 50px;
+					color: #fff;
+					padding: 0 0 10px;
+					line-height: 1.4;
+					@include breakpoint(papabear) {
+						font-size: 2.75rem;
+					}
+					@include breakpoint(teenbear) {
+						line-height: 1.1;
+					}
+
+					&.hidden {
+						text-indent: -9999px;
+						position: absolute;
+					}
+				}
+
+				h3 {
+					font-size: 20px;
+					font-family: var(--fl1-secondary-font);
+					color: var(--fl1-white);
+					line-height: 1.4;
+					margin-top: var(--fl1-spacing-sm);
+					@include breakpoint(1000px) {
+						padding: 0;
+						font-size: 20px;
+						line-height: 28px;
+					}
+
+					a {
+						color: #fff;
+						border-bottom: 1px #fff solid;
+					}
+				}
+
+				.sub-caption { 
+					position: absolute;
+					bottom: 0;
+					padding: var(--fl1-spacing-md) 0 0;
+
+					@include breakpoint(papabear) {
+						position: static;
+						padding: var(--fl1-spacing-md) 0;
+					}
+
+					@include breakpoint(teenbear) {
+						padding: var(--fl1-spacing-xl) 0 0;
+					}
+				}
+
+				p {
+					font-size: var(--fl1-spacing-sm);
+					font-family: var(--fl1-secondary-font);
+					color: var(--fl1-white);
+					text-transform: uppercase;
+
+					a { 
+						color: var(--fl1-primary);
+					}
+
+					// @include breakpoint(papabear) {
+					// 	font-weight: 500;
+					// }
+				}
+
+				.avb-banner__caption-actions {
+					margin-top: 40px;
+					display: flex;
+					justify-content: flex-start;
+					gap: 8px;
+					@include breakpoint(cousinbear) {
+						margin-top: 30px;
+						width: 100%;
+						justify-content: flex-start;
+					}
+
+					a{background: none; border: 1px solid white; color: white;}
+				}
+			}
+
+			// Media
+			.avb-banner__media {
+				position: absolute;
+				z-index: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+
+				.avb-banner__medium {
+					width: 100%;
+					height: 100%;
+					position: relative;
+
+					&.image {
+						height: 100%;
+						background-size: cover;
+						background-position: center;
+						background-repeat: no-repeat;
+						transition: all 0.8s ease;
+						position: relative;
+
+						&.no-img {
+							background-image: url('img/banner-v-no-img.jpg');
+							background-size: cover;
+						}
+
+						img{
+							width: 400px; position: absolute; bottom: 0; left: calc(50% - 200px);
+							@include breakpoint(teenbear){
+								width: 280px;
+								bottom: 0;
+								left: calc(50% - 140px);
+							}
+						}
+					}
+
+				}
+
+				video {
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					min-width: 100%;
+					min-height: 100%;
+					width: auto;
+					height: auto;
+					transform: translate(-50%, -50%) scale(1.15);
+				}
+
+				iframe {
+					position: relative;
+					pointer-events: none;
+				}
+
+				.loading {
+					position: absolute;
+					top: 44%;
+					left: 0;
+					width: 100%;
+				}
+			}
+
+			.avb-banner__overlay {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+				display: flex;
+
+				@for $i from 0 through 100 {
+					$num: 100-$i;
+					$alpha: calc($num / 100);
+					&.opacity-#{$num} {
+						@if $i == 100 {
+							display: none;
+						} @else {
+							background: rgba(0, 0, 0, $alpha);
+						}
+
+						// @include breakpoint(teenbear) {
+						// 	background: #000;
+						// }
+					}
+				}
+			}
+		}
+
+		/// No Banner
+		&.avb-empty {
+			background: var(--fl1-primary);
+
+			.avb-banner {
+				height: auto;
+				min-height: 270px;
+				padding: 60px 0;
+			}
+		}
+
+		/// Slick dot navigation
+		.slick-dots {
+			width: auto;
+			text-align: center;
+			bottom: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			z-index: 6;
+
+			@include breakpoint(cousinbear) {
+				bottom: 30px;
+			}
+
+			li {
+				vertical-align: top;
+				margin: 0 4px;
+				width: auto;
+				height: auto;
+
+				@include breakpoint(cousinbear) {
+					margin: 0 8px;
+				}
+
+				button {
+					width: 15px;
+					height: 15px;
+					border: none;
+					cursor: pointer;
+					border-radius: 50%;
+					background: rgba(white, 0.6);
+					box-shadow: 0 0 0 0 transparent;
+					vertical-align: middle;
+					color: #fff;
+					margin: 0;
+					transition: all 0.3s ease;
+					opacity: 1;
+					&::before {
+						display: none;
+					}
+					&:focus {
+						outline: none;
+					}
+					&:hover {
+						opacity: 1;
+					}
+
+					@include breakpoint(cousinbear) {
+						width: 13px;
+						height: 13px;
+						opacity: 1;
+						background: $lightgrey;
+					}
+				}
+				&.slick-active {
+					button {
+						background: var(--fl1-primary);
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&.avb-dots-center {
+			.slick-dots {
+				left: 50%;
+				transform: translateY(-50%);
+				justify-content: center;
+			}
+		}
+
+		&.avb-dots-left {
+			.slick-dots {
+				left: 0;
+				justify-content: flex-start;
+				padding-left: calc((100vw - 1185px) / 2);
+
+				@include breakpoint(cousinbear) {
+					all: none;
+					width: 100%;
+					justify-content: center;
+				}
+			}
+		}
+
+		&.avb-dots-right {
+			.slick-dots {
+				right: 0;
+				justify-content: flex-end;
+				padding-right: calc((100vw - 1185px) / 2);
+
+				@include breakpoint(cousinbear) {
+					all: none;
+					width: 100%;
+					justify-content: center;
+				}
+			}
+		}
+
+		&.avb-inner {
+			.avb-banner {
+				//min-height: 200px;
+			}
+
+			@include breakpoint(cousinbear) {
+				margin-bottom: 0;
+
+				.avb-banner {
+					height: auto !important;
+					min-height: 120px;
+					.avb-banner__caption-actions {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.avb__waves {
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.avb__down-arrow {
+		position: absolute;
+		z-index: 6;
+		display: flex;
+		justify-content: center;
+		bottom: 150px;
+		left: 50%;
+		transform: translateY(-50%);
+
+		@include breakpoint(cousinbear) {
+			display: none;
+		}
+
+		figure {
+			cursor: pointer;
+
+			&:hover {
+				svg {
+					transition: all 0.3s ease;
+					transform: scale(1.07);
+				}
+			}
+		}
+
+		svg {
+			transition: all 0.3s ease;
+			transform: scale(1);
+			width: 50px;
+			path {
+				stroke: var(--fl1-white);
+			}
+		}
+	}
+}
+
+body.page-has-wave-separator {
+	section.avb .avb-banners .avb-banner {
+		.avb-banner__caption {
+			margin: 240px 0 260px;
+
+			@include breakpoint(cousinbear) {
+				margin: 140px 0 180px;
+			}
+		}
+	}
+
+	&.wl-theme-default {
+		section.avb .avb-banners .avb-banner {
+			.avb-banner__caption {
+				margin-bottom: 360px;
+			}
+		}
+	}
+}

@@ -1,0 +1,215 @@
+/*
+*	APF Search Form
+*
+*	Property search form style
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+.apf__search {
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: var(--fl1-radius-xl);
+	padding: var(--fl1-spacing-md);
+	position: relative;
+
+	@include breakpoint(mamabear) {
+		padding: 0;
+	}
+
+	h4.apf__search--refine-heding {
+		display: none;
+		font-size: 21px;
+		color: $secondary;
+		font-weight: 700;
+		padding-bottom: 10px;
+		a.apf__search--close {
+			i {
+				font-size: 27px;
+				color: var(--fl1-text);
+			}
+		}
+	}
+
+	form {
+		display: flex;
+		flex-wrap: wrap;
+
+		.apf__search__main {
+			display: flex;
+			gap: var(--fl1-spacing-sm);
+			width: 100%;
+			@include breakpoint(brotherbear) {
+				flex-direction: column;
+				&.open {
+					display: flex;
+				}
+			}
+		}
+
+		@import 'search-form/switch';
+		@import 'search-form/location';
+		@import 'search-form/select';
+
+		.apf-field-group {
+			display: flex;
+			gap: var(--fl1-spacing-sm);
+
+			@include breakpoint(brotherbear){flex-direction: column;}
+
+			&.expand { 
+				flex: 1;
+
+				@include breakpoint(brotherbear){flex-direction: column;}
+			}
+
+			@include breakpoint(mamabear) {
+				min-width: 100%;
+			}
+			@include breakpoint(sisterbear) {
+				flex-wrap: wrap;
+			}
+
+			&.apf-selects-pop {
+				display: none;
+				padding: var(--fl1-spacing-sm);
+				border-radius: var(--fl1-radius-md);
+				border: 1px var(--fl1-border) solid;
+				box-shadow: 0 8px 32px rgba(0,0,0,.15);
+				z-index: 5;
+				background: var(--fl1-white);
+				right: 0;
+	
+				&.popped {
+					display: flex;
+					position: absolute;
+				}
+	
+				label { 
+					font-size: var(--fl1-font-xxs);
+					font-weight: 600;
+					color: var(--fl1-secondary);
+					margin-bottom: var(--fl1-spacing-xxs);
+				}
+			}
+		}
+
+		article {
+			&.apf-display { 
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				position: relative;
+				gap: var(--fl1-spacing-xxs);
+				padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+				border-radius: var(--fl1-radius-md);
+				border: 1px var(--fl1-border) solid;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				user-select: none;
+				cursor: pointer;
+
+				@include breakpoint(brotherbear){justify-content: center;}
+				
+				&.active { 
+					border: 1px var(--fl1-primary) solid;
+				}
+
+				strong { 
+					display: block;
+					font-size: var(--fl1-font-xxs);
+					color: var(--fl1-secondary);
+					font-weight: 600;
+				}
+
+				span { 
+					display: flex;
+					font-size: var(--fl1-font-xs);
+					gap: var(--fl1-spacing-xs);
+					align-items: center;
+				}
+			}
+		}
+
+		@import 'apf-filter-form';
+
+		.apf-search-hide-on-mobile {
+			@include breakpoint(brotherbear) {
+				display: none !important;
+			}
+		}
+	}
+
+	&.pop {
+		display: block;
+		position: fixed;
+		z-index: 99999999999;
+		padding: 20px;
+		background: #fff;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		-ms-overflow-y: scroll;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+		padding-bottom: 300px;
+
+		h4.apf__search--refine-heding {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		form {
+			flex-direction: column-reverse;
+
+			.apf__search__main {
+				flex-direction: column;
+			}
+			.apf-search-hide-on-mobile {
+				display: flex !important;
+			}
+
+			.apf__search__button {
+				background: $secondary;
+				color: #fff;
+			}
+
+			.apf__results__filter {
+				a.apf__filter__refine {
+					display: none;
+				}
+				.apf__results__filter__view {
+					display: none;
+				}
+
+				.apf__results__filter__sort {
+					@include breakpoint(mamabear) {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						article,
+						select {
+							width: 100%;
+							max-width: 100%;
+						}
+						article {
+							padding: 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.apf__combined {
+	.apf__search {
+		@include breakpoint(mamabear) {
+			&.show {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+/**
+
+ * CSS3 Animations
+ *
+*/
+
+/**
+ * Fade
+*/
+
+$lightgrey: #eef0fb;
+
+// fadeInUp
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 10%, 0);}
+    to { opacity: 1; transform: none;}
+}
+
+// fadeOutUp
+@keyframes fadeOutUp {
+    from { opacity: 1; transform: translate3d(0, 10%, 0);}
+    to { opacity: 0; transform: none;}
+}
+
+// fadeInDown
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translate3d(0, -25%, 0);}
+    to { opacity: 1; transform: none;}
+}
+
+// fadeOutDown
+@keyframes fadeOutDown {
+    from { opacity: 1; transform: translate3d(0, -25%, 0);}
+    to { opacity: 0; transform: none;}
+}
+
+// right
+@keyframes fadeInRight {
+    from { opacity: .2;transform: translate3d(8%, 0, 0);}
+    to { opacity: 1;transform: none}
+}
+
+// left
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translate3d(-8%, 0, 0);}
+    to { opacity: 1;transform: none;}
+}
+
+// Facebook-like animation
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+@keyframes progress-bar {
+    0% { width: 0; }
+}
+
+@-webkit-keyframes avbGradient {
+    0% { background-position: 10% 0%; }
+    50% { background-position: 91% 100%; }
+    100% { background-position: 10% 0%; }
+}
+
+@keyframes avbGradient {
+    0% { background-position: 10% 0%; }
+    50% { background-position: 91% 100%; }
+    100% { background-position: 10% 0%; }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--fl1-tertiary), 0.7);
+    }
+
+    30% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 30px rgba(var(--fl1-tertiary), 0);
+    }
+    
+    70% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--fl1-tertiary), 0);
+    }
+}
+
+.pulse {
+    animation: pulse 3s infinite;
+    &:hover { 
+        animation: none;
+    }
+}
+
+.is-loading {
+    $from: lighten($lightgrey, 2%);
+	$to: scale-color($from, $lightness: -10%);
+	
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(-90deg, lighten($lightgrey, 2%) 0%, $lightgrey 50%, lighten($lightgrey, 2%) 100%);
+	background-size: 400% 400%;
+	animation: pulse 1.2s ease-in-out infinite;
+	@keyframes pulse {
+		0% {
+			background-position: 0% 0%
+		}
+		100% {
+			background-position: -135% 0%
+		}
+	}
+}
+

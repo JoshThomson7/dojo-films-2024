@@ -1,0 +1,220 @@
+///
+/// Grid Boxes
+///
+
+.fc_grid_boxes {
+	.grid__boxes__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		// margin: 0 -16px;
+
+		article {
+			display: flex;
+			min-width: 240px;
+
+			.padder {
+				margin: 16px;
+				width: 100%;
+				background: #fff;
+				border-radius: var(--fl1-radius-xxl);
+				box-shadow: 0 6px 20px rgb(0 0 0 / 10%);
+				position: relative;
+			}
+
+			figure {
+				border-radius: var(--fl1-radius-xxl) var(--fl1-radius-xxl) 0 0;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 100%;
+				height: 300px;
+
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.grid-box-content {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				gap: var(--fl1-spacing-sm);
+				padding: var(--fl1-spacing-md) var(--fl1-spacing-lg) var(--fl1-spacing-xl);
+
+				h5 {
+					font-size: 16px;
+					color: var(--fl1-secondary);
+					font-weight: 500;
+					line-height: normal;
+					letter-spacing: 0.5px;
+				}
+
+				h3 {
+					font-size: 26px;
+					color: var(--fl1-text);
+					font-weight: 700;
+				}
+
+				p {
+					font-size: var(--fl1-font-xs);
+					line-height: 1.5;
+					color: var(--fl1-text);
+				}
+
+				a { 
+					color: var(--fl1-primary);
+				}
+
+				ul.links {
+					display: flex;
+					flex-direction: column;
+					gap: var(--fl1-spacing-sm);
+					
+					li {
+						a { 
+							color: var(--fl1-text);
+							display: flex;
+							justify-content: space-between;
+
+							i { 
+								display: block;
+								margin-left: var(--fl1-spacing-sm);
+								color: var(--fl1-secondary);
+							}
+
+							&:hover {
+								color: var(--fl1-primary);
+							}
+						}
+					}
+				}
+
+				a.link {
+					align-self: flex-start;
+					height: auto;
+					font-size: 14px;
+					font-weight: bold;
+					color: var(--fl1-primary);
+					margin-top: 16px;
+					display: flex;
+					align-items: center;
+					align-self: flex-start;
+
+					i {
+						font-size: 14px;
+						margin-left: 8px;
+					}
+
+					&:hover {
+						i {
+							&::before {
+								content: '\f061';
+							}
+						}
+					}
+				}
+
+				&.center { 
+					text-align: center;
+				}
+
+				&.left {
+					text-align: left;
+				}
+
+				&.right {
+					text-align: right;
+				}
+			}
+
+			&.full {
+				width: 100%;
+			}
+			&.half {
+				width: math.percentage(math.div(1, 2));
+				@include breakpoint(sisterbear){width: 100%;}
+			}
+			&.one__third {
+				width: math.percentage(math.div(1, 3));
+				@include breakpoint(1000px) {
+					width: 50%;
+				}
+				@include breakpoint(700px0){width: 100%;}
+			}
+			&.one__fourth {
+				width: math.percentage(math.div(1, 4));
+				@include breakpoint(teenbear) {
+					width: 100%;
+				}
+			}
+		}
+
+		&.overlay {
+			article {
+				figure { 
+					height: 460px;
+					transition: all .4s ease-in-out;
+					transform: scale(1);
+					@include breakpoint(teenbear){height: 350px; background-position: bottom;}
+				}
+				.padder {
+					padding: 0;
+					border-radius: var(--fl1-radius-xxl);
+					overflow: hidden;
+				}
+
+				.grid-box-content {
+					padding: 40px 40px 20px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.7) 100%);
+					color: #fff;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+
+					h5,
+					h3,
+					p {
+						color: #fff;
+					}
+
+					h3 { 
+						font-size: 26px;
+						text-transform: uppercase;
+					}
+
+					a {
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-end;
+						gap: var(--fl1-spacing-xs);
+						transition: all .4s ease-in-out;
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				&:hover {
+					figure {
+						transform: scale(1.04);
+						transition: all .4s ease-in-out;
+					}
+
+					a { 
+						transform: scale(1.02);
+						transition: all .6s ease-in-out;
+					}
+				}
+			}
+		}
+
+		.slick-dots {
+			margin: 0;
+		}
+	}
+}

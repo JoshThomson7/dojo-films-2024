@@ -1,0 +1,17 @@
+/*
+*	APF Branches
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+/* Find a branch */
+.apf__branches__map__wrap { border-radius: 5px; padding: 10px; box-shadow: 0 0 6px rgba(black, 0.15); background: #fff; position:relative; overflow:hidden;
+    #apf_branches_map { width:100%; height: 600px; overflow:hidden;
+        * { max-width:none;}
+    }
+
+    @import '../apf-map-infowindow';
+
+    #infowindow { margin: 10px;}
+}

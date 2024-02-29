@@ -1,0 +1,44 @@
+/// 
+/// Flexible Content
+/// 
+
+@use "sass:math";
+
+@import '../../../scss/inc/mixins';
+@import '../../../scss/inc/animations';
+@import 'fc-tab-scrollbar';
+
+.flexible__content {
+	position: relative;
+	// margin-bottom: var(--fl1-spacing-lg);
+
+	@import 'fc-global';
+	@import 'layouts/fc-accordion';
+	@import 'layouts/fc-banner-advert';
+	@import 'layouts/fc-buttons';
+	@import 'layouts/fc-call-to-action';
+	@import 'layouts/fc-carousel';
+	@import 'layouts/fc-column-boxes';
+	@import 'layouts/fc-contact';
+	@import 'layouts/fc-feature';
+	@import 'layouts/fc-feature-boxes';
+	@import 'layouts/fc-feature-tabs';
+	@import 'layouts/fc-gallery';
+	@import 'layouts/fc-grid-boxes';
+	@import 'layouts/fc-grid-links';
+	@import 'layouts/fc-icon-grid';
+	@import 'layouts/fc-masonry';
+	@import 'layouts/fc-properties';
+	@import 'layouts/fc-stats';
+	@import 'layouts/fc-steps';
+	@import 'layouts/fc-table';
+	@import 'layouts/fc-tabs';
+	@import 'layouts/fc-team';
+	@import 'layouts/fc-team-popup';
+	@import 'layouts/fc-testimonials';
+	@import 'layouts/fc-timeline';
+	@import 'layouts/fc-video';
+	
+}
+
+@import 'layouts/fc-free-text';

@@ -1,0 +1,71 @@
+// SCSS Awesomeness
+
+/* -------------------------------------------
+    ____           __          __
+   /  _/___  _____/ /_  ______/ /__  _____
+   / // __ \/ ___/ / / / / __  / _ \/ ___/
+ _/ // / / / /__/ / /_/ / /_/ /  __(__  )
+/___/_/ /_/\___/_/\__,_/\__,_/\___/____/
+
+------------------------------------------- */
+@use "sass:math";
+
+// General
+@import 'inc/css-vars';
+@import 'inc/vars';
+@import 'inc/mixins';
+@import 'inc/reset';
+@import 'inc/fonts';
+@import 'inc/animations'; 
+
+// lib
+@import '../lib/mmenu/css/mmenu';
+@import '../lib/slick/scss/slick-theme';
+@import '../lib/slick/scss/slick';
+@import '../lib/lightgallery/css/lightgallery';
+@import '../lib/lightslider/css/lightslider';
+@import '../lib/tooltipster/scss/tooltipster.bundle.min';
+@import '../lib/tooltipster/scss/tooltipster-dark';
+@import '../lib/tooltipster/scss/tooltipster-light';
+@import '../lib/chosen/scss/chosen.min';
+@import '../lib/chosen/scss/chosen-material-theme';
+@import '../lib/flatpickr/flatpickr.min';
+@import '../modules/gravity-forms/scss/gf';
+
+/**
+ * Layout
+ * Template layout include
+*/
+@import 'layout/global';
+@import 'layout/nav-mobile';
+
+@import 'layout/header';
+@import 'layout/breadcrumbs';
+
+// Modules
+@import '../modules/advanced-video-banners/scss/avb';
+@import 'layout/footer';
+
+// CUSTOM
+// .home{
+//   #page{
+//     background-image: url(img/blue-circle.png); background-position: top left; background-size: 1500px; background-repeat: no-repeat;
+//   }
+// } 
+
+html {
+  scroll-behavior: smooth; 
+}
+
+.fal, .far{
+  font-family: "Font Awesome 6 Pro"!important;
+}
+
+.home{
+	.flexible__content{
+		background-image: url(img/hand-bg.png), url(img/hand-bg.png);
+		background-position: top 50px left, bottom 50px right;
+		background-size: 400px, 400px;
+		background-repeat: no-repeat, no-repeat;
+	}
+}

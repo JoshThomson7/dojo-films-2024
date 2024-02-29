@@ -1,0 +1,72 @@
+/*
+*	Blog Single
+*
+*	Styles for blog single
+*
+*	@package Blog
+*	@version 1.0
+*/
+
+.blog--hero {
+	border-radius: var(--fl1-radius-xxl);
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 0 6px 20px rgb(0 0 0 / 10%);
+	margin: var(--fl1-spacing-xl) 0;
+	background-color: var(--fl1-secondary);
+
+	&-overlay {
+		background: linear-gradient(180deg, rgba(1, 15, 69, 0.2) 10%, rgba(1, 15, 69, 0.95) 100%);
+		padding: 4rem 6rem;
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--fl1-spacing-sm);
+		max-width: 50%;
+		align-items: flex-start;
+
+		h5 {
+			background: var(--fl1-secondary-light);
+			color: var(--fl1-secondary);
+			padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+			border-radius: var(--fl1-radius-lg);
+		}
+
+		h2 { 
+			font-size: var(--fl1-font-xxxl);
+			font-weight: 700;
+			color: var(--fl1-white);
+
+			a { 
+				color: var(--fl1-white);
+				&:hover {
+					color: var(--fl1-primary);
+				}
+			}
+		}
+
+		date {
+			color: var(--fl1-white);
+			font-size: var(--fl1-font-xs);
+			font-weight: 700;
+		}
+
+		p {
+			color: var(--fl1-white);
+			font-size: var(--fl1-font-xs);
+		}
+	}
+}
+
+.blog--content {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto var(--fl1-spacing-lg);
+}

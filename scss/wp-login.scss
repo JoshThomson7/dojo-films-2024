@@ -1,0 +1,192 @@
+/*
+	Custom Login
+	Description: Style the WordPress Login page
+*/
+
+@import 'inc/css-vars';
+@import 'inc/mixins';
+@import 'inc/fonts';
+
+html {
+	body.login {
+		outline: none;
+		font-family: var(--fl1-primary-font);
+		min-height: 600px;
+		display: flex;
+		box-sizing: border-box;
+		background: var(--fl1-secondary-light);
+	}
+
+	.login {
+		/* Logo */
+		h1 { 
+			padding: 0 0 var(--fl1-spacing-md);
+			a {
+				background: url(img/logo.png) no-repeat scroll 0 0 transparent;
+				background-size: 250px auto;
+				display: block;
+				margin: 0 auto;
+				width: 250px;
+				padding: 0;
+				height: 80px;
+			}
+		}
+
+		/* Error Message */
+
+		#login_error {
+			margin: 0 var(--fl1-spacing-md) var(--fl1-spacing-md) !important;
+			background: tomato !important;
+			color: #fff;
+			box-shadow: none !important;
+			border: none;
+			border-radius: var(--fl1-radius-sm);
+			a {
+				color: #fff;
+			}
+		}
+
+		/* Other message */
+		p {
+			&.message {
+				margin: 0 var(--fl1-spacing-md) var(--fl1-spacing-md);
+				background: #86d81b !important;
+				color: #fff;
+				box-shadow: none !important;
+				border: none;
+				border-radius: var(--fl1-radius-sm);
+			}
+		}
+
+		#nav {
+			color: var(--fl1-text) !important;
+			float: right;
+			margin: 0;
+			padding: 0 var(--fl1-spacing-md) var(--fl1-spacing-md) 0;
+			opacity: 0.7;
+			a {
+				color: var(--fl1-white) !important;
+				text-decoration: none !important;
+				&:hover {
+					color: var(--fl1-text) !important;
+					text-decoration: underline !important;
+				}
+			}
+		}
+
+		#login {
+			margin: auto;
+			background: var(--fl1-primary);
+			padding: 0;
+			width: 100%;
+			max-width: 450px !important;
+			overflow: hidden;
+			border-radius: var(--fl1-radius-lg);
+			padding: var(--fl1-spacing-xl) var(--fl1-spacing-xl) 3.75rem;
+			box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+			border: 1px var(--fl1-border) solid;
+		}
+
+		#backtoblog {
+			float: left;
+			margin: 0;
+			padding: 0 0 var(--fl1-spacing-md) var(--fl1-spacing-md);
+			opacity: 0.7;
+			a {
+				color: var(--fl1-white) !important;
+				text-decoration: none;
+				&:hover {
+					color: var(--fl1-text) !important;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		form {
+			background: none;
+			padding: 0 var(--fl1-spacing-md) var(--fl1-spacing-md);
+			margin-top: 0;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border: none;
+			label {
+				font-size: var(--fl1-font-xs);
+				color: var(--fl1-white);
+				position: relative;
+				content: '';
+				display: block;
+				font-weight: 600;
+			}
+
+			input[type='text'],
+			input[type='password'] {
+				background: var(--fl1-lightgrey);
+				border: none;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				color: var(--fl1-text);
+				padding: var(--fl1-spacing-sm) var(--fl1-spacing-md);
+				margin-top: var(--fl1-spacing-xs);
+				font-size: var(--fl1-spacing-sm);
+				border-radius: var(--fl1-radius-sm);
+			}
+
+			label[for='user_login']:before {
+				content: '\f110';
+				font-family: dashicons;
+				font-size: var(--fl1-font-sm);
+				position: relative;
+				top: 0.25rem;
+				margin-right: var(--fl1-spacing-xs);
+				color: var(--fl1-white);
+			}
+			label[for='user_pass']:before {
+				content: '\f160';
+				font-family: dashicons;
+				font-size: var(--fl1-font-sm);
+				position: relative;
+				top: 0.25rem;
+				margin-right: var(--fl1-spacing-xs);
+				color: var(--fl1-white);
+			}
+
+			p.submit {
+				display: flex;
+				justify-content: flex-end;
+				#wp-submit {
+					padding: var(--fl1-spacing-xs) var(--fl1-spacing-xxl);
+					font-size: var(--fl1-font-xs);
+					text-transform: uppercase;
+					font-weight: 700;
+					font-family: var(--fl1-primary-font);
+					background: var(--fl1-white);
+					color: var(--fl1-primary);
+					border: none;
+					border-radius: var(--fl1-radius-xxl);
+					transition: all 0.3s ease;
+				}
+			}
+		}
+
+		.button.wp-hide-pw .dashicons {
+			top: var(--fl1-spacing-sm);
+			color: var(--fl1-primary);
+		}
+	}
+
+	.forgetmenot {
+		padding-top: var(--fl1-spacing-sm);
+		display: flex;
+		align-self: center;
+		input {
+			margin: 0.25rem 0 0 0;
+		}
+		label {
+			font-size: 15px !important;
+			color: var(--fl1-text);
+			display: flex;
+			margin-left: var(--fl1-spacing-xs);
+			line-height: normal;
+		}
+	}
+}

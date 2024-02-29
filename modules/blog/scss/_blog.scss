@@ -1,0 +1,101 @@
+/*
+*	Blog styles
+*
+*	Styles for the blog and its templates
+*
+*	@package Blog
+*	@version 1.0
+*/
+
+@use "sass:math";
+
+@import "../../../scss/inc/vars";
+@import "../../../scss/inc/mixins";
+@import "../../../scss/inc/animations";
+
+section {
+	&.blog {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		position: relative;
+		z-index: 1;
+		margin-bottom: var(--fl1-spacing-xl);
+
+		.blog--loop {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 var(--fl1-spacing-xs);
+
+			h4 { 
+				flex: 1 0 100%;
+				font-size: var(--fl1-font-xl);
+				color: var(--fl1-text);
+				font-weight: 700;
+				padding: var(--fl1-spacing-lg) var(--fl1-spacing-sm) var(--fl1-spacing-sm);
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				a { 
+					color: var(--fl1-primary);
+					font-size: var(--fl1-font-xxs);
+					font-weight: 700;
+					transition: all 0.3s ease-in-out;
+					display: flex;
+					gap: var(--fl1-spacing-xs);
+				}
+			}
+		
+			@include breakpoint(mamabear) {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+
+		.blog--archive {
+			display: flex;
+
+			.blog--loop {
+				.blog--post {
+					width: 100%;
+					
+					&-padder {
+						flex-direction: row;
+					}
+
+					&-img { 
+						width: 40%;
+						min-height: 240px;
+					}
+				}
+			}
+		}
+
+		.blog--cats {
+			display: flex;
+			justify-content: center;
+			padding-bottom: var(--fl1-spacing-lg);
+
+			select {
+				width: 100%;
+				max-width: 400px;
+				padding: var(--fl1-spacing-sm) var(--fl1-spacing-md);
+				border: none;
+				border-radius: var(--fl1-radius-md);
+				color: var(--fl1-text);
+				font-family: var(--fl1-primary-font);
+				font-size: var(--fl1-font-xs);
+				cursor: pointer;
+				appearance: none;
+				transition: all 0.3s ease-in-out;
+				background: url(../../../../img/select-arrow-down.png) no-repeat right 8px center var(--fl1-white);
+				background-size: 1.5rem;
+			}
+		}
+	}
+}
+
+@import "inc/_blog-filters";
+@import "inc/_blog-post";
+@import "inc/_blog-single";

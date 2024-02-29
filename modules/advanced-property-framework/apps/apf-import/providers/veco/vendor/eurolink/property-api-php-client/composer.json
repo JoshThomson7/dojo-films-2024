@@ -1,0 +1,31 @@
+{
+    "name": "eurolink/property-api-php-client",
+    "description": "A PHP library for Eurolink's Property API",
+    "keywords": ["property", "Eurolink"],
+    "type": "package",
+    "require": {
+        "php": ">=5.6.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "nesbot/carbon": "^1.23",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "license": "MIT",
+    "authors": [{
+        "name": "Eurolink",
+        "email": "info@eurolink.co"
+    }],
+    "autoload": {
+        "psr-4": {
+            "PropertyAPI\\": "src/PropertyAPI/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "platform": {
+            "php": "5.6.0"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5"
+    }
+}

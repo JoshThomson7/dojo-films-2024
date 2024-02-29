@@ -1,0 +1,73 @@
+/*
+*	Property search map
+*
+*	Styles for map results
+*
+*	@package Advanced Property Framework
+*	@version 1.0
+*/
+
+/* Pagination */
+.apf__pagination {
+	width: 100%;
+	padding: 0;
+	position: relative;
+	font-size: var(--fl1-font-sm);
+	overflow: hidden;
+	margin: var(--fl1-spacing-sm);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include breakpoint(ipad_p) {
+		padding: 0 var(--fl1-spacing-xs);
+	}
+
+	.apf__page__count {
+		padding: var(--fl1-spacing-sm) 0;
+		color: var(--fl1-text);
+		font-size: 16px;
+	}
+
+	.apf__page__numbers {
+		display: flex;
+		align-items: center;
+	}
+
+	span {
+		display: block;
+		margin: 0;
+		text-decoration: none;
+		width: auto;
+		color: var(--fl1-text);
+		padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+		&:first-child {
+			padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+		}
+	}
+
+	a {
+		padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+		display: block;
+		margin: 0;
+		text-decoration: none;
+		width: auto;
+		color: var(--fl1-text);
+		border-radius: var(--fl1-radius-sm);
+
+		&:first-child {
+			padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+		}
+		&:hover {
+			background: $lightgrey;
+			color: var(--fl1-text);
+		}
+	}
+
+	.apf__current__page {
+		padding: var(--fl1-spacing-xs) var(--fl1-spacing-sm);
+		background: $secondary;
+		color: #fff;
+		border-radius: var(--fl1-radius-sm);
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,193 @@
+/*
+-----------------------------
+  ______                        ____
+ /_  __/__  ____ _____ ___     / __ \____  ____        __  ______
+  / / / _ \/ __ `/ __ `__ \   / /_/ / __ \/ __ \______/ / / / __ \
+ / / /  __/ /_/ / / / / / /  / ____/ /_/ / /_/ /_____/ /_/ / /_/ /
+/_/  \___/\__,_/_/ /_/ /_/  /_/    \____/ .___/      \__,_/ .___/
+                                       /_/               /_/
+-----------------------------
+Team Pop-up
+*/
+
+.team__popup__holder {
+	display: flex;
+	transition: all 0.5s ease;
+	//background: rgba(0,0,0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	overflow-y: scroll;
+	visibility: hidden;
+	opacity: 0;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(10px);
+
+	@include breakpoint(mamabear) {
+		align-items: flex-start;
+	}
+
+	&.on {
+		transition: all 0.5s ease;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.team__popup {
+		background: rgba(255, 255, 255, 1);
+		position: relative;
+		transition: all 0.2s ease;
+		transform: rotateX(90deg);
+		max-width: 1200px;
+		border-radius: var(--fl1-radius-xxl);
+		display: none;
+		overflow: hidden;
+		box-shadow: 0 45px 80px rgba(0,0,0,0.6);
+		@include breakpoint(mamabear) {
+			flex-direction: column;
+		}
+
+		.team__popup__img {
+			width: 40%;
+			position: relative;
+			overflow: hidden;
+			@include breakpoint(mamabear) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.team__popup__content {
+			width: 60%;
+			padding: var(--fl1-spacing-lg);
+			position: relative;
+			@include breakpoint(mamabear) {
+				width: 100%;
+				padding: 20px 10px;
+			}
+
+			.team__popup__nav {
+				position: absolute;
+				top: var(--fl1-spacing-md);
+				right: var(--fl1-spacing-lg);
+				ul {
+					display: flex;
+					margin: 0;
+					padding: 0;
+					li {
+						list-style: none;
+						a {
+							font-size: 28px;
+							color: var(--fl1-text);
+							padding: 15px 10px;
+							display: block;
+							&:hover {
+								color: var(--fl1-primary);
+							}
+						}
+
+						&.inactive {
+							a {
+								color: var(--fl1-lightgrey);
+								pointer-events: none;
+							}
+						}
+					}
+				}
+			}
+
+			.team__popup__icon {
+				line-height: 31px;
+				padding: 0 20px 25px 0;
+				span.icon {
+					color: var(--fl1-primary);
+					display: block;
+					float: left;
+					margin-right: 10px;
+					font-size: 30px;
+				}
+				a {
+					color: var(--fl1-text);
+				}
+			}
+		}
+
+		h3 {
+			font-size: var(--fl1-font-xl);
+			color: var(--fl1-primary);
+			font-weight: 600;
+			margin-bottom: var(--fl1-spacing-md);
+			span {
+				display: block;
+				font-size: 22px;
+				color: var(--fl1-text);
+				text-transform: none;
+			}
+		}
+
+		.team__popup__email {
+			display: block;
+			padding-bottom: 27px;
+			padding-left: 35px;
+			span {
+				padding-top: 4px;
+				display: block;
+			}
+			a {
+				color: #d9cfcf;
+			}
+		}
+
+		p {
+			line-height: 26px;
+			margin-bottom: var(--fl1-spacing-sm);
+			font-size: var(--fl1-font-xs);
+			color: var(--fl1-text);
+			clear: both;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			strong { 
+				font-weight: 600;
+			}
+
+			a { 
+				color: var(--fl1-secondary);
+			}
+		}
+
+		ul {
+			padding-left: var(--fl1-spacing-sm);
+			margin-bottom: var(--fl1-spacing-sm);
+			li { 
+				list-style: disc;
+				line-height: 26px;
+				font-size: var(--fl1-font-xs);
+				margin-bottom: var(--fl1-spacing-xs);
+				color: var(--fl1-text);
+			}
+		}
+
+		&.is__active {
+			display: flex;
+			transform: rotateX(0deg);
+			&.rotate__bye {
+				transform: rotateX(90deg);
+				transition: all 0.2s ease;
+			}
+			&.rotate__hello {
+				transform: rotateX(0deg);
+				transition: all 0.2s 0.2s ease;
+			}
+		}
+	}
+}
