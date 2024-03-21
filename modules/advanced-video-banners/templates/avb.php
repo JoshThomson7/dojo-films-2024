@@ -53,7 +53,7 @@ if(!empty($banners)):
                                 <?php if($banner->button_label() || $banner->button_2_label()): ?>
                                     <div class="avb-banner__caption-actions">
 										<?php if($banner->button_label()): ?>
-											<a href="<?php echo $banner->button_url(); ?>"<?php echo $banner->button_url_target(); ?> title="<?php echo $banner->button_label(); ?>" class="button primary">
+											<a href="<?php echo $banner->button_url(); ?>"<?php echo $banner->button_url_target(); ?> title="<?php echo $banner->button_label(); ?>" class="button large primary">
 												<span><?php echo $banner->button_label(); ?></span>
 											</a>
 										<?php endif; ?>

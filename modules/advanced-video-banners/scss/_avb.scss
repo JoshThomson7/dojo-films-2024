@@ -83,7 +83,7 @@ section.avb {
 				.max__width{display: flex; justify-content: space-between;}
 
 				.avb-banner__caption-wrap {
-					width: 47%;
+					width: 60%;
 
 					figure {
 						margin-bottom: 20px;
@@ -118,7 +118,7 @@ section.avb {
 
 				h1,
 				h2 {
-					font-size: 50px;
+					font-size: 60px;
 					color: #fff;
 					padding: 0 0 10px;
 					line-height: 1.4;
@@ -136,7 +136,7 @@ section.avb {
 				}
 
 				h3 {
-					font-size: 20px;
+					font-size: 30px;
 					font-family: var(--fl1-secondary-font);
 					color: var(--fl1-white);
 					line-height: 1.4;
@@ -194,7 +194,7 @@ section.avb {
 						justify-content: flex-start;
 					}
 
-					a{background: none; border: 1px solid white; color: white;}
+					a{background: white; border: 1px solid white; color: #000;}
 				}
 			}
 

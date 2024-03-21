@@ -5437,7 +5437,7 @@ var Carousels = (function($) {
 
 	function carouselImages() {
 
-		$('.carousel_images:not(.footer-logos)').slick({
+		$('.deactivate-carousel_images:not(.footer-logos)').slick({
 			dots: true,
 			infinite: true,
 			speed: 300,
@@ -5543,7 +5543,7 @@ var Carousels = (function($) {
 			dots: true,
 			infinite: false,
 			speed: 300,
-			slidesToShow: 1,
+			slidesToShow: 3,
 			slidesToScroll: 1,
 			arrows: false,
 			responsive : [

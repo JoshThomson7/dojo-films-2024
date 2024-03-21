@@ -66,9 +66,73 @@
 footer {
 	position: relative;
 	width: 100%;
-	margin: 0 auto;
-	border-radius: var(--fl1-radius-2xl);
-	background: var(--fl1-primary);
+	margin-top: 30px;
+
+	.subfooter {
+		background: var(--fl1-primary);
+	
+		.max__width {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px 0;
+	
+			@include breakpoint(papabear) {
+				flex-direction: column;
+			}
+	
+			.subfooter--left {
+				display: flex;
+				align-items: center;
+				@include breakpoint(papabear) {
+					flex-direction: column;
+					margin-bottom: 20px;
+					text-align: center;
+				}
+	
+				a{
+					width: 120px;
+	
+					svg{fill: var(--fl1-white);}
+				}
+			}
+	
+			.subfooter--right {
+				display: flex;
+				justify-content: flex-end;
+				align-content: center;
+				@include breakpoint(papabear) {
+					padding-right: 0;
+					text-align: center;
+				}
+	
+				h4 {
+					color: var(--fl1-primary-light);
+				}
+			}
+	
+			figure {
+				max-width: 260px;
+				width: 100%;
+				margin-right: 20px;
+				@include breakpoint(papabear) {
+					margin-right: 0;
+				}
+			}
+	
+			small {
+				font-size: 12px;
+				color: var(--fl1-white);
+				@include breakpoint(papabear) {
+					margin-right: 0;
+				}
+				a {
+					color: var(--fl1-white);
+					font-size: 12px;
+				}
+			}
+		}
+	}
 
 	.footer__signup {
 		background: var(--fl1-secondary);
@@ -372,73 +436,6 @@ footer {
 
 			.footer__meta--right{
 				a{color: #548687;}
-			}
-		}
-	}
-}
-
-.subfooter {
-	background: var(--fl1-primary);
-
-	.max__width {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 20px 0;
-		max-width: 1160px;
-
-		@include breakpoint(papabear) {
-			flex-direction: column;
-		}
-
-		.subfooter--left {
-			display: flex;
-			align-items: center;
-			@include breakpoint(papabear) {
-				flex-direction: column;
-				margin-bottom: 20px;
-				text-align: center;
-			}
-
-			a{
-				width: 120px;
-
-				svg{fill: var(--fl1-white);}
-			}
-		}
-
-		.subfooter--right {
-			display: flex;
-			justify-content: flex-end;
-			align-content: center;
-			@include breakpoint(papabear) {
-				padding-right: 0;
-				text-align: center;
-			}
-
-			h4 {
-				color: var(--fl1-primary-light);
-			}
-		}
-
-		figure {
-			max-width: 260px;
-			width: 100%;
-			margin-right: 20px;
-			@include breakpoint(papabear) {
-				margin-right: 0;
-			}
-		}
-
-		small {
-			font-size: 12px;
-			color: var(--fl1-white);
-			@include breakpoint(papabear) {
-				margin-right: 0;
-			}
-			a {
-				color: var(--fl1-white);
-				font-size: 12px;
 			}
 		}
 	}

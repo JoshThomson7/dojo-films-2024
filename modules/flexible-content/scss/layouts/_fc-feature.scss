@@ -44,7 +44,7 @@ Feature
 			h3 {
 				font-size: 34px;
 				font-weight: 700;
-				color: var(--fl1-primary);
+				color: var(--fl1-white);
 				margin-bottom: 20px;
 
 				@include breakpoint(teenbear){
@@ -54,8 +54,8 @@ Feature
 			h5 {
 				font-size: 20px;
 				font-weight: 600;
-				margin-bottom: 0;
-				color: var(--fl1-primary);
+				margin-bottom: 20px;
+				color: var(--fl1-white);
 				text-transform: uppercase;
 				line-height: normal;
 			}

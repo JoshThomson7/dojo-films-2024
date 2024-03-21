@@ -15,8 +15,8 @@
 			.padder {
 				margin: 16px;
 				width: 100%;
-				background: #fff;
-				border-radius: var(--fl1-radius-xxl);
+				background: #000;
+				// border-radius: var(--fl1-radius-xxl);
 				box-shadow: 0 6px 20px rgb(0 0 0 / 10%);
 				position: relative;
 			}
@@ -42,20 +42,19 @@
 				flex-direction: column;
 				justify-content: flex-end;
 				gap: var(--fl1-spacing-sm);
-				padding: var(--fl1-spacing-md) var(--fl1-spacing-lg) var(--fl1-spacing-xl);
+				padding: var(--fl1-spacing-md) var(--fl1-spacing-lg) var(--fl1-spacing-md);
 
 				h5 {
 					font-size: 16px;
 					color: var(--fl1-secondary);
-					font-weight: 500;
 					line-height: normal;
 					letter-spacing: 0.5px;
 				}
 
 				h3 {
-					font-size: 26px;
+					font-size: 20px;
 					color: var(--fl1-text);
-					font-weight: 700;
+					text-align: center;
 				}
 
 				p {

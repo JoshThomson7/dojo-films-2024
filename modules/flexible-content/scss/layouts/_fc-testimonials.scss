@@ -3,10 +3,6 @@
 */
 
 .fc_testimonials {
-    background: var(--fl1-primary);
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 45px;
 
     .fc-layout-heading{
         h2{color: white;}
@@ -15,6 +11,8 @@
     .testimonials__wrapper {
 
         article {
+            display: flex; justify-content: center;
+
             .inner { padding: 20px;}
 
             .testimonial__meta { flex:1 0 100%;
@@ -24,15 +22,15 @@
                 }
 
                 .stars {
-                    display: flex; justify-content: center;
+                    display: flex; justify-content: center; margin-bottom: 20px;
                     @include breakpoint(mamabear) { margin-bottom:10px;}
-                    span { padding: 0 3px; color:var(--fl1-secondary); font-size: 20px;}
+                    span { padding: 0 3px; color:var(--fl1-white); font-size: 20px;}
                 }
             }
 
             .testim__content { overflow: hidden;
                 &.trunc { height: 75px;}
-                p { text-align: center; font-size:16px; line-height:26px; color: var(--fl1-white); padding-bottom:15px; margin:0;}
+                p { text-align: center; font-size:20px; line-height:26px; color: var(--fl1-white); padding-bottom:15px; margin:0;}
             }
 
             .testim__read-more { font-size: 13px; color: var(--fl1-white); display: block; margin: 10px 20px 0 0; cursor: pointer; text-align: right;

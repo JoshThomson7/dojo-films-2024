@@ -67,7 +67,7 @@ $video_id = get_sub_field('feature_video_id');
 		<div class="feature__action">
 			<?php if($link_text && $link_url): ?>
 				<div class="feature__action-main<?php if(FC_Helpers::video_popup($link_url)) { echo ' video-pop'; } ?>">
-					<?php echo FL1_Helpers::button('<span>'.$link_text.'</span>', $link_url, 'button primary'.($dropdown ? ' has-dropdown' : '')); ?>
+					<?php echo FL1_Helpers::button('<span>'.$link_text.'</span>', $link_url, 'button white'.($dropdown ? ' has-dropdown' : '')); ?>
 
 					<?php if($dropdown): ?>
 						<div class="feature__action-dropdown">

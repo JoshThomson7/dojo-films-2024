@@ -7,7 +7,7 @@
       "uuidString" : "E3A06CD2-C4DD-478B-B0DB-996D30A81E10"
     }
   ],
-  "creatorBuild" : "34518",
+  "creatorBuild" : "34564",
   "files" : {
     "\/404.php" : {
       "cB" : 0,
@@ -361,6 +361,19 @@
       "oF" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-none",
+      "rq" : 75
+    },
+    "\/img\/Copy of Dojo-Logos-MasterFile_Full Logo.png" : {
+      "ft" : 32768,
+      "iS" : 15304,
+      "oA" : 0,
+      "oAP" : "\/img\/Copy of Dojo-Logos-MasterFile_Full Logo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
       "rq" : 75
     },
     "\/img\/hang-bg.png" : {
@@ -8974,9 +8987,6 @@
       "no-new-native-nonconstructor" : {
         "active" : 0
       },
-      "no-new-object" : {
-        "active" : 0
-      },
       "no-new-symbol" : {
         "active" : 1
       },
@@ -8988,6 +8998,9 @@
       },
       "no-obj-calls" : {
         "active" : 1
+      },
+      "no-object-constructor" : {
+        "active" : 0
       },
       "no-octal" : {
         "active" : 1
