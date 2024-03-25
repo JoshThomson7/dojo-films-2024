@@ -17,6 +17,10 @@ if($attachment_id) {
     $feature_text_width = get_sub_field('feature_text_width').'%';
 }
 
+$feature_img_align = ' left';
+if(get_sub_field('feature_image_align') == 'right') {
+	$feature_img_align = ' right';
+}
 $dropdown = get_sub_field('feature_dropdown_links');
 $top_heading = get_sub_field('feature_top_heading');
 $heading = get_sub_field('feature_heading');
@@ -30,7 +34,7 @@ $video_id = get_sub_field('feature_video_id');
 ?>
 
 <div class="fc_feature_wrapper<?php echo $feature_img_align.($open['is_full_width'] ? ' fc-feature-expand' : ''); ?>">
-    <?php if($attachment_id): ?>
+    
         <div class="feature__image">
 			<?php
 				if($video_id):
@@ -46,8 +50,8 @@ $video_id = get_sub_field('feature_video_id');
 					}
 				
 			?>
-				<div class="feature__image-video video-pop">
-					<a href="<?php echo $url_play; ?>" class="fa-regular fa-play tooltip" title="Play video"></a>
+				<div class="feature__image-video">
+					<?php echo do_shortcode('[video width="960" height="540" mp4="https://dojo.twsbeta1.co.uk/wp-content/uploads/2024/03/Point-of-Sale.mp4"][/video]'); ?>
 				</div>
 			<?php endif; ?>
             <?php if($attachment_id): ?>
@@ -57,7 +61,7 @@ $video_id = get_sub_field('feature_video_id');
 				<img src="<?php echo $feature_img['url']; ?>" />
             <?php endif; ?>
         </div><!-- feature__image -->
-    <?php endif; ?>
+    
 
     <div class="feature__text" style="width: <?php echo $feature_text_width; ?>">
         <?php if($top_heading): ?><h5><?php echo $top_heading; ?></h5><?php endif; ?>

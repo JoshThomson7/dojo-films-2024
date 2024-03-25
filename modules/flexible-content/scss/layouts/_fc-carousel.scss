@@ -12,13 +12,13 @@ Carousel
 
 .fc_carousel_images {
     .carousel_images {
-        display: flex; justify-content: space-between;
+        display: flex; justify-content: space-between; align-items: center;
 
         .carousel_image {
-            margin: 0 20px;
+            max-width: 220px;
             
             a { display: flex; justify-content: center;}
-            img { width: auto;}
+            img { max-width: 220px;}
         }
     }
 }

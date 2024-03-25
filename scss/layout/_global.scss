@@ -126,7 +126,7 @@ img {
 		transform: scale3d(1.02, 1.02, 1.02);
 
 		&:not(.primary):not(.secondary):not(.textLight):not(.lightGrey) {
-			background: var(--fl1-lightgrey);
+			background: var(--fl1-lightgrey); color: black;
 		}
 	}
 

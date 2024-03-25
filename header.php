@@ -26,15 +26,13 @@
 			<div class="max__width">
 				<div class="header__main--left">
 					<div class="logo">
-						<a href="<?php echo esc_url(home_url()); ?>" title="<?php bloginfo('name'); ?>">
-							<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" />
-						</a>
+						<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" />
 					</div>
 				</div>
 
 				<div class="header__main--right">
 					<ul class="buttons">
-						<a href="#" class="button outline">Book a Call <i class="fa fa-arrow-right"></i></a>
+						<a href="#" class="button outline form-open">Book a Call <i class="fa fa-arrow-right"></i></a>
 					</ul>
 				</div>
 			</div><!-- max__width -->

@@ -5,9 +5,7 @@
 		<div class="max__width">
 
 			<div class="subfooter--left">
-				<a href="<?php echo esc_url(home_url()); ?>" title="<?php bloginfo('name'); ?>">
-					<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" />
-				</a>
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/img/logo.png'); ?>" />
 			</div><!-- subfooter--left -->
 		</div><!-- max__width -->
 	</div><!-- subfooter -->

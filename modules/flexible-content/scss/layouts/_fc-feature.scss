@@ -256,21 +256,8 @@ Feature
 				border-right: 40px solid transparent;
 				// overflow: hidden;
 				flex: 1;
-				position: sticky;
+				// position: sticky;
 				top: 20px;
-
-				&::before {
-					content: "";
-					background-image: url(/wp-content/themes/withington-baths-2024/img/heart-logo.png);
-					background-size: contain;
-					background-repeat: no-repeat;
-					display: block;
-					position: absolute;
-					top: -5%; 
-					left: -20%;
-					width: 200px;
-					height: 200px;
-				}
 
 				img { 
 					border-radius: var(--fl1-radius-xxl);
