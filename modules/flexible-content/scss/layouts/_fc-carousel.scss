@@ -12,13 +12,15 @@ Carousel
 
 .fc_carousel_images {
     .carousel_images {
-        display: flex; justify-content: space-between; align-items: center;
+        display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
 
         .carousel_image {
-            max-width: 220px;
+            max-width: 210px;
+            @include breakpoint(900){width: 50%; max-width: none; display: flex; justify-content: center; margin: 20px 0;}
+            @include breakpoint(400){width: 100%;}
             
             a { display: flex; justify-content: center;}
-            img { max-width: 220px;}
+            img { max-width: 210px;}
         }
     }
 }

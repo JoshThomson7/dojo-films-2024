@@ -66,5 +66,18 @@ div.wpforms-container-full .wpforms-field-label, div.wpforms-container-full .wpf
 div.wpforms-container-full input[type=submit]:not(:hover):not(:active), div.wpforms-container-full button[type=submit]:not(:hover):not(:active), div.wpforms-container-full .wpforms-page-button:not(:hover):not(:active){background-color: white!important; color: black!important; padding: var(--fl1-spacing-sm) var(--fl1-spacing-md); border-radius: 50px; height: auto!important;}
 div.wpforms-container-full input[type=submit]:hover, div.wpforms-container-full input[type=submit]:active, div.wpforms-container-full button[type=submit]:hover, div.wpforms-container-full button[type=submit]:active, div.wpforms-container-full .wpforms-page-button:hover, div.wpforms-container-full .wpforms-page-button:active{background-color: black!important; color: white!important; padding: var(--fl1-spacing-sm) var(--fl1-spacing-md); border-radius: 50px; height: auto!important;}
 
+.wpforms-container .wpforms-one-half{
+  @include breakpoint(475){width: 100%!important;}
+}
+
+.wpforms-container .wpforms-field.wpforms-one-half{
+  @include breakpoint(475){margin: 0!important;} 
+}
+
+// POPUP
+#popmake-628{
+  @include breakpoint(400){max-width: 320px!important;} 
+}
+
 // VIDEO SLIDER
-.mejs-volume-slider{display: none!important;}
+.mejs-volume-slider{display: none!important;} 

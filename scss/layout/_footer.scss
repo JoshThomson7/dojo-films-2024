@@ -83,11 +83,6 @@ footer {
 			.subfooter--left {
 				display: flex;
 				align-items: center;
-				@include breakpoint(papabear) {
-					flex-direction: column;
-					margin-bottom: 20px;
-					text-align: center;
-				}
 	
 				img{width: 120px;}
 			}

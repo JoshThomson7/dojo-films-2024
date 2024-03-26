@@ -50,6 +50,8 @@ Feature
 				@include breakpoint(teenbear){
 					line-height: 1.1; margin-top: 10px;
 				}
+
+				@include breakpoint(900){font-size: 30px;}
 			}
 			h5 {
 				font-size: 20px;
@@ -176,6 +178,7 @@ Feature
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				@include breakpoint(900) {position: relative;}
 
 				a {
 					width: 7rem;
@@ -228,6 +231,8 @@ Feature
 		}
 		&.right {
 			flex-direction: row-reverse;
+			@include breakpoint(900) {flex-direction: column;}
+
 			.feature__text {
 				padding-right: var(--fl1-spacing-xxxl);
 				padding-left: calc((100vw - 1172px) / 2);
@@ -279,7 +284,7 @@ Feature
 
 			.feature__text {
 				border-left: 40px solid transparent;
-				@include breakpoint(teenbear){border-left: 0;}
+				@include breakpoint(900){border-left: 0;}
 			}
 
 			&.right {
@@ -301,7 +306,6 @@ Feature
 						border-left: 20px solid transparent;
 					}
 					@include breakpoint(brotherbear) {
-						width: 100%;
 						order: 0;
 						border-left: none;
 					}
@@ -313,8 +317,17 @@ Feature
 				.feature__text {
 					padding-right: 0;
 					padding-left: 0;
+
+					@include breakpoint(900){display: flex; align-items: center; text-align: center;}
+				}
+
+				.feature__image {
+					img{
+						@include breakpoint(900){width: 60%; margin: 0 auto;}
+						@include breakpoint(400){width: 100%;}
+					}
 				}
 			}
 		}
-	} // .max__width
+	}
 }

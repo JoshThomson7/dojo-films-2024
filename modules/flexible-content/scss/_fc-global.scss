@@ -17,6 +17,8 @@
 		position: relative;
 		z-index: 2;
 		margin-bottom: var(--fl1-spacing-lg);
+		
+		@include breakpoint(900){justify-content: center; text-align: center;}
 	
 		.fc-layout-heading-left { 
 			display: flex;
@@ -34,10 +36,9 @@
 			letter-spacing: 1px;
 		}
 		h2 {
-			font-weight: 700;
 			font-size: var(--fl1-font-xxl);
-			color: var(--fl1-primary);
 			line-height: 1.4;
+			margin-bottom: 10px;
 		}
 	
 		p {
@@ -92,7 +93,7 @@
 
 		&.fc-background {
 			.max__width {
-				padding: var(--fl1-spacing-md) 0; 
+				padding: var(--fl1-spacing-md) 20px; 
 			}
 
 			&.fc-bk-primary {
@@ -220,6 +221,12 @@ $fc_bk_colours: (
         } @else if $key == secondary {
             .fc-layout-heading {
 				h2, p{color: white;}
+
+				h2{
+					@include breakpoint(mamabear) {
+						font-size: 28px;
+					}
+				}
             }
         }
     }
