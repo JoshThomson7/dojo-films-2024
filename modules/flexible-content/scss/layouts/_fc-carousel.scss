@@ -17,7 +17,7 @@ Carousel
         .carousel_image {
             max-width: 210px;
             @include breakpoint(900){width: 50%; max-width: none; display: flex; justify-content: center; margin: 20px 0;}
-            @include breakpoint(400){width: 100%;}
+            @include breakpoint(550){width: 100%;}
             
             a { display: flex; justify-content: center;}
             img { max-width: 210px;}

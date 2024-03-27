@@ -140,7 +140,6 @@ section.avb {
 					font-family: var(--fl1-secondary-font);
 					color: var(--fl1-white);
 					line-height: 1.4;
-					margin-top: var(--fl1-spacing-sm);
 					@include breakpoint(1000px) {
 						padding: 0;
 						font-size: 20px;

@@ -363,11 +363,11 @@
       "ou" : "lpckwebp-none",
       "rq" : 75
     },
-    "\/img\/Copy of Dojo-Logos-MasterFile_Full Logo.png" : {
+    "\/img\/hang-bg.png" : {
       "ft" : 32768,
-      "iS" : 15304,
+      "iS" : 15782,
       "oA" : 0,
-      "oAP" : "\/img\/Copy of Dojo-Logos-MasterFile_Full Logo.png",
+      "oAP" : "\/img\/hang-bg.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -376,11 +376,11 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/img\/hang-bg.png" : {
+    "\/img\/logo.png" : {
       "ft" : 32768,
-      "iS" : 15782,
+      "iS" : 15304,
       "oA" : 0,
-      "oAP" : "\/img\/hang-bg.png",
+      "oAP" : "\/img\/logo.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,

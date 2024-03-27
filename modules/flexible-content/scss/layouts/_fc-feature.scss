@@ -319,6 +319,8 @@ Feature
 					padding-left: 0;
 
 					@include breakpoint(900){display: flex; align-items: center; text-align: center;}
+
+					h2{font-family: 'Sora Regular'; font-size: 20px;} 
 				}
 
 				.feature__image {

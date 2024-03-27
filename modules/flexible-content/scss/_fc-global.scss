@@ -168,12 +168,10 @@
 
 // Background colours
 $fc_bk_colours: (
-    blue: #fff,
     primary: var(--fl1-primary),
     secondary: var(--fl1-secondary),
     tertiary: var(--fl1-tertiary),
     dark: var(--fl1-tertiary),
-    lightgrey: var(--fl1-lightgrey),
 );
 
 @each $key, $fc_bk_colour in $fc_bk_colours {

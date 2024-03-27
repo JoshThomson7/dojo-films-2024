@@ -74,10 +74,38 @@ div.wpforms-container-full input[type=submit]:hover, div.wpforms-container-full 
   @include breakpoint(475){margin: 0!important;} 
 }
 
+// WP FORMS CONFIRM
+div.wpforms-container-full .wpforms-confirmation-container-full, div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message){
+  background: black!important; border: 2px solid white!important;
+}
+
+div.wpforms-container-full .wpforms-confirmation-container-full p, div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message) p{
+  color: white!important; font-size: 20px;
+}
+
+div.wpforms-container-full .wpforms-confirmation-container-full p a, div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message) p a{
+  color: white!important; text-decoration: underline;
+}
+
+div.wpforms-container-full .wpforms-confirmation-container-full{
+  max-width: 550px; margin: 0!important;
+}
+
+div.wpforms-container-full img{
+  margin-left: auto;
+}
+
 // POPUP
+.popmake-title{font-family: "Sora Bold"!important;}
+.pum-content p{font-family: "Sora Regular"!important;}
 #popmake-628{
   @include breakpoint(400){max-width: 320px!important;} 
 }
+
+// POPUP - THANKYOU
+#pum_popup_title_694{text-align: center; margin-bottom: 30px;}
+#popmake-694 .pum-content a{color: white;}
+#popmake-694 .pum-content img{width: auto; margin: 40px auto 0;}
 
 // VIDEO SLIDER
 .mejs-volume-slider{display: none!important;} 

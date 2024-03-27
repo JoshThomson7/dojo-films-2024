@@ -24,7 +24,7 @@ if($order_by === 'custom') {
 
 $testimonials = new WP_Query($args);
 ?>
-<div class="testimonials__wrapper testimonials-carousel">
+<div class="testimonials__wrapper">
     <?php
         while($testimonials->have_posts()) : $testimonials->the_post();
 

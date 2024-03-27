@@ -32,7 +32,7 @@
 
 				<div class="header__main--right">
 					<ul class="buttons">
-						<a href="#" class="button outline form-open">Book a Call <i class="fa fa-arrow-right"></i></a>
+						<a href="#" class="button outline calendly-open popmake-702">Book a Call <i class="fa fa-arrow-right"></i></a>
 					</ul>
 				</div>
 			</div><!-- max__width -->
